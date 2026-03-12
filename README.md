@@ -1,33 +1,35 @@
 # Dolomites Trip Dashboard
 
-GitHub Pages-ready export with offline support.
+GitHub Pages-ready static site with offline support after first online load.
 
 ## Files
-- `index.html` — main app
-- `sw.js` — service worker for offline caching
-- `manifest.webmanifest` — installable PWA metadata
-- `icons/` — app icons
-- `.nojekyll` — disables Jekyll processing on GitHub Pages
+- `index.html`
+- `styles.css`
+- `app.js`
+- `trip-data.json`
+- `sw.js`
+- `manifest.webmanifest`
+- `icons/`
+- `.nojekyll`
 
 ## Publish on GitHub Pages
-1. Create a new GitHub repo.
-2. Upload all files in this folder to the repo root.
-3. In GitHub: **Settings → Pages**
-4. Set source to **Deploy from a branch**
-5. Choose **main** branch and **/(root)**
-6. Save. Your site will publish at the repo URL.
+1. Create a repo and upload all files in this folder.
+2. In GitHub, open **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select your publishing branch and root folder.
+5. Wait for GitHub Pages to publish the site.
 
 ## Offline use
-- Open the site once while online.
-- The service worker caches the app shell.
-- After that, the dashboard can load offline on iPhone and Android browsers.
+1. Open the site once while online.
+2. Let the page fully load.
+3. The service worker caches the core files for offline reuse.
 
 ## Cache versioning
 Current cache name:
-`dolomites-trip-dashboard-v4-20260312`
+`dolomites-trip-dashboard-v5-20260312`
 
-When you update files later, bump the cache name in `sw.js` so old files are replaced cleanly.
+Whenever you update the site files, bump the cache name in `sw.js` so users receive the new version.
 
-## Relative paths
-This export uses relative paths like `./sw.js` and `./manifest.webmanifest`, which works better on GitHub Pages repo URLs such as:
+## Paths
+This project uses relative paths like `./app.js`, `./sw.js`, and `./trip-data.json`, which is the right setup for GitHub Pages repos such as:
 `https://username.github.io/my-repo/`

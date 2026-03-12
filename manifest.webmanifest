@@ -2,10 +2,9 @@
   "name": "Dolomites Trip Dashboard",
   "short_name": "Dolomites",
   "start_url": "./index.html",
-  "scope": "./",
   "display": "standalone",
   "background_color": "#f6f7f9",
-  "theme_color": "#1f6feb",
+  "theme_color": "#f6f7f9",
   "icons": [
     {
       "src": "./icons/icon-192.png",
