@@ -7,16 +7,16 @@
   "bases": [
     {
       "id": "ortisei",
-      "label": "Schgaguler (West base)"
+      "label": "Kastelruth / Schgaguler (West base)"
     },
     {
       "id": "cortina",
-      "label": "Golden Hill (East base)"
+      "label": "Dobbiaco / Golden Hill (East base)"
     }
   ],
   "hotels": {
     "ortisei": {
-      "label": "West base hotel (default: Schgaguler)",
+      "label": "West base hotel (Kastelruth / nearby alternatives)",
       "defaultHotelId": "schgaguler_hotel",
       "presetHotels": [
         {
@@ -46,7 +46,7 @@
       ]
     },
     "cortina": {
-      "label": "East base hotel (default: Golden Hill)",
+      "label": "East base hotel (Dobbiaco / nearby alternatives)",
       "defaultHotelId": "golden_hill_carmen_stoll",
       "presetHotels": [
         {
@@ -335,11 +335,6 @@
       "name": "Compatsch mountain station / plateau start",
       "mapQuery": "Compatsch Seiser Alm",
       "mapLink": "https://www.google.com/maps/search/?api=1&query=Compatsch+Seiser+Alm"
-    },
-    "garage_seceda": {
-      "name": "Parking + Garage Seceda",
-      "mapQuery": "Parking Garage Seceda Ortisei",
-      "mapLink": "https://www.google.com/maps/search/?api=1&query=Parking+Garage+Seceda+Ortisei"
     }
   },
   "hikes": {
@@ -373,7 +368,7 @@
       ],
       "commitment": "day_of_ok",
       "reason": "Best blend of jagged ridgeline, green pasture, and huts without too much dead time.",
-      "access": "Lift strongly recommended: use the [Col Raiser valley station](https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena). Best parking: [Col Raiser valley station parking](https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena); direct-Ortisei backup is [Parking + Garage Seceda](https://www.google.com/maps/search/?api=1&query=Parking+Garage+Seceda+Ortisei). Col Raiser is the practical access for this route and keeps the day cleaner than using the direct Seceda line.",
+      "access": "Lift strongly recommended: use the Col Raiser valley station (https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena). Best parking: Col Raiser parking at the valley station (https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena). Direct Seceda lift / Parking + Garage Seceda (https://www.google.com/maps/search/?api=1&query=Parking+Garage+Seceda+Ortisei) is a backup access point, but Col Raiser is the better fit for this route.",
       "cost": "Col Raiser round trip €32",
       "booking": "Day-of is usually fine; arrive for first wave."
     },
@@ -406,7 +401,7 @@
       ],
       "commitment": "day_of_ok",
       "reason": "Slightly more compact Seceda variant with similar payoff.",
-      "access": "Lift strongly recommended: use the [Col Raiser valley station](https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena). Best parking: [Col Raiser valley station parking](https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena); direct-Ortisei backup is [Parking + Garage Seceda](https://www.google.com/maps/search/?api=1&query=Parking+Garage+Seceda+Ortisei). Col Raiser is the practical access for this route and keeps the day cleaner than using the direct Seceda line.",
+      "access": "Lift strongly recommended: use the Col Raiser valley station (https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena). Best parking: Col Raiser parking at the valley station (https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena). Direct Seceda lift / Parking + Garage Seceda (https://www.google.com/maps/search/?api=1&query=Parking+Garage+Seceda+Ortisei) is a backup access point, but Col Raiser is the better fit for this route.",
       "cost": "Col Raiser round trip €32",
       "booking": "Buy on site."
     },
@@ -441,7 +436,7 @@
       ],
       "commitment": "reserve_if_possible",
       "reason": "One of the best meadow + hut + Odle backdrop hikes in the Dolomites.",
-      "access": "No lift. Park at [Zans Parking](https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss). This is the practical trailhead for the classic route; check current Zans/Ranui access rules before you go.",
+      "access": "No lift. Start from Zans Parking (https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss). Best parking: Zans Parking (https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss); reserve/check access if possible because the Ranui signal-light system controls valley traffic.",
       "cost": "Parking fee on site if applicable",
       "booking": "Reserve if possible; otherwise go early."
     },
@@ -474,7 +469,7 @@
       ],
       "commitment": "reserve_if_possible",
       "reason": "Shorter Odle-hut payoff and one of the best practical lower-commitment backups from the Schgaguler base.",
-      "access": "No lift. Park at [Zans Parking](https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss). This is the practical trailhead for the classic route; check current Zans/Ranui access rules before you go.",
+      "access": "No lift. Start from Zans Parking (https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss). Best parking: Zans Parking (https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss); reserve/check access if possible because the Ranui signal-light system controls valley traffic.",
       "cost": "Parking fee on site if applicable",
       "booking": "Reserve if possible."
     },
@@ -508,7 +503,7 @@
       ],
       "commitment": "easy_day_of",
       "reason": "Best church / meadow / village composition for your taste.",
-      "access": "No lift. Use [Santa Maddalena village parking / designated visitor parking](https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy); backup is the [Puez-Geisler Nature Park Visitor Center area](https://www.google.com/maps/search/?api=1&query=Puez-Geisler+Nature+Park+Visitor+Center+Santa+Maddalena). This is the practical access for the village and church-view area.",
+      "access": "No lift. Start from Santa Maddalena village / visitor-center parking (https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy) and follow local access signs toward the panoramic path. Best parking: village/designated parking near Santa Maddalena (https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy); keep the Puez-Geisler visitor-center area (https://www.google.com/maps/search/?api=1&query=Puez-Geisler+Nature+Park+Visitor+Center+Santa+Maddalena) as a backup parking reference.",
       "cost": "Village parking fee locally controlled",
       "booking": "No lift; flexible day-of."
     },
@@ -542,7 +537,7 @@
       ],
       "commitment": "easy_day_of",
       "reason": "Best short photo-stop version if you want minimal effort.",
-      "access": "No lift. Use [Santa Maddalena village parking / designated visitor parking](https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy); backup is the [Puez-Geisler Nature Park Visitor Center area](https://www.google.com/maps/search/?api=1&query=Puez-Geisler+Nature+Park+Visitor+Center+Santa+Maddalena). This is the practical access for the village and church-view area.",
+      "access": "No lift. Start from Santa Maddalena village / visitor-center parking (https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy) and follow local access signs toward the panoramic path. Best parking: village/designated parking near Santa Maddalena (https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy); keep the Puez-Geisler visitor-center area (https://www.google.com/maps/search/?api=1&query=Puez-Geisler+Nature+Park+Visitor+Center+Santa+Maddalena) as a backup parking reference.",
       "cost": "Village parking fee locally controlled",
       "booking": "No lift; flexible."
     },
@@ -578,7 +573,7 @@
       ],
       "commitment": "day_of_ok",
       "reason": "Best low-effort rolling green meadow day with Sassolungo backdrop.",
-      "access": "Lift recommended: use the [Seis–Seiser Alm cableway valley station](https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway) or the [Ortisei–Alpe di Siusi / Mont Sëuc gondola valley station](https://www.google.com/maps/search/?api=1&query=Ortisei+Alpe+di+Siusi+Gondola) if you want the Ortisei side. Best parking: [Car park Silbernagl (P1)](https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern) for Seis access; early-drive fallback is [Parking P2 Compatsch](https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch). This works best when you skip the lower road walk and start directly on the plateau.",
+      "access": "Lift recommended: Seis–Seiser Alm cableway valley station (https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway) is the most practical from Schgaguler for a Compatsch start. Best parking: free open parking at the valley station or Car park Silbernagl (P1) (https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern). Drive-up alternative: P2 Compatsch (https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch) if you are already on the plateau early; road access is restricted later in the day.",
       "cost": "Ortisei–Alpe di Siusi gondola €35 round trip",
       "booking": "Day-of usually fine."
     },
@@ -612,7 +607,7 @@
       ],
       "commitment": "day_of_ok",
       "reason": "Best Alpe di Siusi alternate if you want more viewpoint emphasis.",
-      "access": "Lift recommended: use the [Seis–Seiser Alm cableway valley station](https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway). Best parking: [Car park Silbernagl (P1)](https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern); early-drive fallback is [Parking P2 Compatsch](https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch). This route is better from the plateau so you spend time on the viewpoints rather than the lower approach.",
+      "access": "Lift recommended: Seis–Seiser Alm cableway valley station (https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway) is the most practical from Schgaguler for Compatsch / Bullaccia starts. Best parking: free open parking at the valley station or Car park Silbernagl (P1) (https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern). Drive-up alternative: P2 Compatsch (https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch) if you arrive before the road restriction window.",
       "cost": "Lift or parking fees apply",
       "booking": "Day-of usually fine."
     },
@@ -645,7 +640,7 @@
       ],
       "commitment": "easy_day_of",
       "reason": "Strong scenery-per-hour with broader ridge panoramas than the tiny towers-only loop.",
-      "access": "No lift needed, but the chairlift is optional. Park at [Bai de Dones](https://www.google.com/maps/search/?api=1&query=Bai+de+Dones). If you want to skip the lower ascent, use the chairlift from [Bai de Dones](https://www.google.com/maps/search/?api=1&query=Bai+de+Dones).",
+      "access": "Lift optional. Start from Bai de Dones (https://www.google.com/maps/search/?api=1&query=Bai+de+Dones). Best parking: Bai de Dones (https://www.google.com/maps/search/?api=1&query=Bai+de+Dones). Use the 5 Torri chairlift from Bai de Dones if you want to skip the least-interesting lower ascent and save time for the rifugi section.",
       "cost": "Optional chairlift fee on site",
       "booking": "Day-of is fine."
     },
@@ -676,7 +671,7 @@
       ],
       "commitment": "must_reserve",
       "reason": "Best iconic white-rock payoff per hour and the most recognizable East Dolomites hike.",
-      "access": "No lift. Drive to and park at [Rifugio Auronzo parking](https://www.google.com/maps/search/?api=1&query=Rifugio+Auronzo+Parking). This requires the mandatory Auronzo reservation / road-access ticket.",
+      "access": "No lift. Start from Rifugio Auronzo parking (https://www.google.com/maps/search/?api=1&query=Rifugio+Auronzo+Parking). Best parking: Rifugio Auronzo parking (https://www.google.com/maps/search/?api=1&query=Rifugio+Auronzo+Parking) via the mandatory prebooked Auronzo toll-road reservation.",
       "cost": "Auronzo road + parking €40 per car",
       "booking": "Must reserve in advance."
     },
@@ -708,7 +703,7 @@
       ],
       "commitment": "must_reserve",
       "reason": "Massive reward for little time and best paired with the same Auronzo reservation day.",
-      "access": "No lift. Drive to and park at [Rifugio Auronzo parking](https://www.google.com/maps/search/?api=1&query=Rifugio+Auronzo+Parking). This requires the mandatory Auronzo reservation / road-access ticket.",
+      "access": "No lift once at the trailhead. Start from Rifugio Auronzo parking (https://www.google.com/maps/search/?api=1&query=Rifugio+Auronzo+Parking). Best parking: Rifugio Auronzo parking (https://www.google.com/maps/search/?api=1&query=Rifugio+Auronzo+Parking); same access day as Tre Cime.",
       "cost": "Included in same €40 Auronzo road day",
       "booking": "Use same Auronzo reservation."
     },
@@ -740,7 +735,7 @@
       ],
       "commitment": "easy_day_of",
       "reason": "Best turquoise-lake option that still fits your realistic time ceiling.",
-      "access": "No lift. Park near the [Passo Tre Croci trailhead area](https://www.google.com/maps/search/?api=1&query=Passo+Tre+Croci). Arrive early because parking is limited.",
+      "access": "No lift. Start from Passo Tre Croci (https://www.google.com/maps/search/?api=1&query=Passo+Tre+Croci). Best parking: roadside / pass-area parking at Passo Tre Croci (https://www.google.com/maps/search/?api=1&query=Passo+Tre+Croci); arrive early because spaces are limited.",
       "cost": "Standard roadside / pass-area parking",
       "booking": "No formal booking."
     },
@@ -777,7 +772,7 @@
       ],
       "commitment": "day_of_ok",
       "reason": "Best overall Alpe di Siusi ROI from Schgaguler when you use lift access to start directly on the prettier upper plateau.",
-      "access": "Lift recommended: use the [Ortisei–Alpe di Siusi / Mont Sëuc gondola valley station](https://www.google.com/maps/search/?api=1&query=Ortisei+Alpe+di+Siusi+Gondola). Best parking: [Garage Mont Sëuc](https://www.google.com/maps/search/?api=1&query=Garage+Mont+Seuc+Ortisei) right by the lift; town parking is only a secondary fallback. This route works best with lift access so you skip the less-pretty lower approach and start directly on the upper plateau.",
+      "access": "Lift recommended: take the Ortisei–Alpe di Siusi / Mont Sëuc gondola valley station (https://www.google.com/maps/search/?api=1&query=Ortisei+Alpe+di+Siusi+Gondola). Best parking: Garage Mont Sëuc (https://www.google.com/maps/search/?api=1&query=Garage+Mont+Seuc+Ortisei) right by the lift; Garage Central / town parking is a secondary option. This route is best done from the upper plateau so you skip the less-pretty lower approach.",
       "cost": "Ortisei–Alpe di Siusi gondola €35 round trip; Garage Mont Sëuc parking extra.",
       "booking": "Day-of usually fine; go earlier if weather is best in the morning."
     },
@@ -811,7 +806,7 @@
       ],
       "commitment": "easy_day_of",
       "reason": "Best ultra-short Alpe di Siusi scenic hit if you want a lighter arrival-day hike with viewpoint payoff.",
-      "access": "Lift recommended: use the [Seis–Seiser Alm cableway valley station](https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway) or, if you prefer Ortisei access, the [Ortisei–Alpe di Siusi / Mont Sëuc gondola valley station](https://www.google.com/maps/search/?api=1&query=Ortisei+Alpe+di+Siusi+Gondola). Best parking: [Car park Silbernagl (P1)](https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern) for Seis access; if you drive onto the plateau very early, use [Parking P2 Compatsch](https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch). This is the shortest high-ROI plateau option when you want to maximize pretty scenery with minimal time.",
+      "access": "Lift recommended: use the Seis–Seiser Alm cableway valley station (https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway) for the quickest access to the Compatsch / plateau side. Best parking: free open parking at the valley station or Car park Silbernagl (P1) (https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern) if you want covered parking. Drive-up alternative: P2 Compatsch (https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch) if you are already on the plateau early.",
       "cost": "Seis cable car / plateau access fare or plateau parking fees apply.",
       "booking": "Day-of usually fine."
     },
@@ -845,7 +840,7 @@
       ],
       "commitment": "day_of_ok",
       "reason": "Best bigger Alpe di Siusi loop when you want more viewpoint drama than Hans & Paula and are fine using lift access.",
-      "access": "Lift recommended: use the [Seis–Seiser Alm cableway valley station](https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway). Best parking: [Car park Silbernagl (P1)](https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern); early-drive fallback is [Parking P2 Compatsch](https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch). This route is better from the plateau so you spend time on the viewpoints rather than the lower approach.",
+      "access": "Lift recommended: Seis–Seiser Alm cableway valley station (https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway) is the most practical from Schgaguler for Compatsch / Bullaccia starts. Best parking: free open parking at the valley station or Car park Silbernagl (P1) (https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern). Drive-up alternative: P2 Compatsch (https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch) if you arrive before the road restriction window.",
       "cost": "Seis cable car fare or Compatsch parking fees apply.",
       "booking": "Day-of usually fine."
     },
@@ -880,7 +875,7 @@
       ],
       "commitment": "easy_day_of",
       "reason": "Very good easy plateau sampler with broad Dolomite views if you want a softer scenic day without losing the classic Alpe di Siusi look.",
-      "access": "Lift recommended: use the [Seis–Seiser Alm cableway valley station](https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway) to start directly on the plateau. Best parking: [Car park Silbernagl (P1)](https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern); if you reach the plateau by car before the road restriction window, [Parking P2 Compatsch](https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch) is the practical on-plateau start. Good when you want a lower-effort meadow loop with very little unpretty approach.",
+      "access": "Lift recommended: use the Seis–Seiser Alm cableway valley station (https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway) to start around Compatsch. Best parking: free open parking at the valley station or Car park Silbernagl (P1) (https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern). Drive-up alternative: P2 Compatsch (https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch) if you arrive before restrictions.",
       "cost": "Seis cable car fare or Compatsch parking fees apply.",
       "booking": "Day-of usually fine."
     },
@@ -912,7 +907,7 @@
       ],
       "commitment": "day_of_ok",
       "reason": "A stronger longer Alpe di Siusi option with high visual payoff if you want more plateau time and are happy to use the Mont Sëuc access from Ortisei.",
-      "access": "Lift recommended: use the [Ortisei–Alpe di Siusi / Mont Sëuc gondola valley station](https://www.google.com/maps/search/?api=1&query=Ortisei+Alpe+di+Siusi+Gondola). Best parking: [Garage Mont Sëuc](https://www.google.com/maps/search/?api=1&query=Garage+Mont+Seuc+Ortisei). This longer plateau day is most efficient when you start at Mont Sëuc and stay high.",
+      "access": "Lift recommended: take the Ortisei–Alpe di Siusi / Mont Sëuc gondola (https://www.google.com/maps/search/?api=1&query=Ortisei+Alpe+di+Siusi+Gondola). Best parking: Garage Mont Sëuc (https://www.google.com/maps/search/?api=1&query=Garage+Mont+Seuc+Ortisei) at the station; Parking + Garage Seceda (https://www.google.com/maps/search/?api=1&query=Parking+Garage+Seceda+Ortisei) is only relevant if you are already parking in Ortisei center.",
       "cost": "Ortisei–Alpe di Siusi gondola €35 round trip; parking extra.",
       "booking": "Day-of usually fine; clearer weather improves this route."
     },
@@ -947,7 +942,7 @@
       ],
       "commitment": "day_of_ok",
       "reason": "Good lighter Zans-area alternative when you want a hut reward and Odle scenery without committing to the fuller Adolf Munkel outing.",
-      "access": "No lift. Park at [Zans Parking](https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss). This is the practical trailhead for the classic route; check current Zans/Ranui access rules before you go.",
+      "access": "No lift. Start from Zans Parking (https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss). Best parking: Zans Parking (https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss); same Ranui access-control considerations as the other Zans hikes.",
       "cost": "Parking fee if applicable.",
       "booking": "Reserve/check access if possible."
     }
@@ -955,7 +950,7 @@
   "drives": {
     "sellaronda_drive": {
       "id": "sellaronda_drive",
-      "name": "Sellaronda Scenic Loop [2.5–3 hr]",
+      "name": "Sellaronda Scenic Loop",
       "bestBase": "ortisei",
       "summary": "Best full West-side bad-weather scenic loop from Schgaguler when you still want major pass scenery; slightly less effortless than starting in Ortisei, but still very strong from Kastelruth.",
       "weather": [
@@ -994,12 +989,11 @@
         "passo_pordoi",
         "passo_gardena",
         "corvara_in_badia"
-      ],
-      "duration": "2.5–3 hr"
+      ]
     },
     "val_di_funes_drive": {
       "id": "val_di_funes_drive",
-      "name": "Val di Funes Scenic Drive [1.5–2 hr]",
+      "name": "Val di Funes Scenic Drive",
       "bestBase": "ortisei",
       "summary": "Best lower-valley scenic backup from Schgaguler for churches, meadows, farms, and villages when high ridges are not worth committing to.",
       "weather": [
@@ -1035,12 +1029,11 @@
         "san_pietro_funes",
         "santa_maddalena_village",
         "ranui"
-      ],
-      "duration": "1.5–2 hr"
+      ]
     },
     "great_dolomite_transfer": {
       "id": "great_dolomite_transfer",
-      "name": "Great Dolomites Road practical transfer [3.5–4 hr]",
+      "name": "Great Dolomites Road practical transfer",
       "bestBase": "both",
       "summary": "Best scenic hotel-transfer route from Schgaguler to Golden Hill, turning the move east into a pass-heavy drive with white-rock drama.",
       "weather": [
@@ -1079,12 +1072,11 @@
         "corvara_in_badia",
         "arabba",
         "passo_falzarego"
-      ],
-      "duration": "3.5–4 hr"
+      ]
     },
     "east_bad_weather_loop": {
       "id": "east_bad_weather_loop",
-      "name": "Passo Giau longer East scenic loop [2.5–3 hr]",
+      "name": "Passo Giau longer East scenic loop",
       "bestBase": "cortina",
       "summary": "Longer East-side road day from Golden Hill when hiking is not worthwhile and you still want a fuller dramatic-drive option beyond the Misurina corridor.",
       "weather": [
@@ -1124,12 +1116,11 @@
         "passo_falzarego",
         "lago_misurina",
         "colle_santa_lucia"
-      ],
-      "duration": "2.5–3 hr"
+      ]
     },
     "tre_cime_misurina_drive": {
       "id": "tre_cime_misurina_drive",
-      "name": "Tre Cime / Misurina approach mini-drive [1–1.5 hr]",
+      "name": "Tre Cime / Misurina approach mini-drive",
       "bestBase": "cortina",
       "summary": "Best short East-side scenic fallback from Golden Hill when the full Auronzo or Sorapis commitment is not worth it but you still want nearby lake-and-white-rock scenery.",
       "weather": [
@@ -1166,8 +1157,7 @@
         "lago_misurina",
         "lago_antorno",
         "tre_cime_gate"
-      ],
-      "duration": "1–1.5 hr"
+      ]
     }
   },
   "parkingTable": [
@@ -1260,25 +1250,25 @@
     {
       "category": "Book now",
       "item": "Tre Cime / Auronzo road access",
-      "note": "Mandatory for Day 6; reserve when date opens. [Official Auronzo reservation / parking page](https://auronzo.info/en/parking-tre-cime-di-lavaredo/)",
+      "note": "Mandatory for Day 6; reserve when date opens.",
       "link": "https://auronzo.info/en/parking-tre-cime-di-lavaredo/"
     },
     {
       "category": "Check closer to trip",
       "item": "Zans parking / Ranui signal system",
-      "note": "Review the current Zans / Ranui reservation-access rules before the Adolf Munkel day. [Current Zans / Ranui access notes](https://wildconnectionsphotography.com/new-2026-access-restrictions-in-the-dolomites/)",
+      "note": "Review the current Zans / Ranui reservation-access rules before the Adolf Munkel day.",
       "link": "https://wildconnectionsphotography.com/new-2026-access-restrictions-in-the-dolomites/"
     },
     {
       "category": "Can do day-of",
       "item": "Col Raiser lift",
-      "note": "Day-of purchase usually fine if you arrive early. [Col Raiser official site](https://www.colraiser.it/en/)",
+      "note": "Day-of purchase usually fine if you arrive early.",
       "link": "https://www.colraiser.it/en/"
     },
     {
       "category": "Can do day-of",
       "item": "Ortisei–Alpe di Siusi gondola",
-      "note": "Day-of purchase usually fine. [Seiser Alm cable cars / tickets](https://www.seiseralm.it/en/active/summer-holidays/hiking/cable-cars.html)",
+      "note": "Day-of purchase usually fine.",
       "link": "https://www.seiseralm.it/en/active/summer-holidays/hiking/cable-cars.html"
     }
   ],
@@ -1287,7 +1277,7 @@
       "id": "d1_arrival_santa_short",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Val di Funes - Santa Maddalena] Viewpoint Santa Maddalena [1.5–2 hr]",
+      "title": "Optional Santa Maddalena short stop",
       "linkedHikes": [
         "santa_maddalena_viewpoint"
       ],
@@ -1309,7 +1299,7 @@
       ],
       "logistics": [
         "No lift needed.",
-        "Best parking: [Santa Maddalena village / designated parking](https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy); backup is the [Puez-Geisler Nature Park Visitor Center area](https://www.google.com/maps/search/?api=1&query=Puez-Geisler+Nature+Park+Visitor+Center+Santa+Maddalena)."
+        "Best parking: Santa Maddalena village / designated parking (https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy); visitor-center area backup (https://www.google.com/maps/search/?api=1&query=Puez-Geisler+Nature+Park+Visitor+Center+Santa+Maddalena)."
       ],
       "costs": [
         "Village parking fee locally controlled"
@@ -1323,7 +1313,7 @@
       "id": "d1_arrival_town_reset",
       "type": "town",
       "base": "ortisei",
-      "title": "Kastelruth reset / town time [flex]",
+      "title": "Kastelruth reset",
       "linkedHikes": [],
       "summary": "Skip hiking and ease into the trip with a quiet first afternoon in Kastelruth.",
       "whenToUse": "Best if arrival is delayed or energy is low.",
@@ -1353,14 +1343,14 @@
       "id": "d1_val_di_funes_drive",
       "type": "scenic_drive",
       "base": "ortisei",
-      "title": "Val di Funes Scenic Drive [1.5–2 hr]",
+      "title": "Val di Funes scenic drive",
       "linkedDrive": "val_di_funes_drive",
       "summary": "Best mixed/bad-weather fallback from Schgaguler on arrival when you still want villages, churches, and meadow scenery.",
       "whenToUse": "Use when peaks are clouded in but valley scenery is still visible.",
       "timing": {
         "depart": "11:30",
         "arrive": "12:10",
-        "duration": "1.5–2 hr",
+        "duration": "3–5 hr flexible",
         "return": "17:00"
       },
       "accessRoutes": [],
@@ -1376,7 +1366,7 @@
       "id": "d2_seceda_primary",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Seceda - Val Gardena] Col Raiser - Seceda - Pieralongia - Rifugio Firenze [4.5–5 hr]",
+      "title": "Seceda hero day from Kastelruth",
       "linkedHikes": [
         "seceda_primary"
       ],
@@ -1385,20 +1375,20 @@
       "timing": {
         "depart": "07:45",
         "arrive": "08:30",
-        "duration": "4.5–5 hr",
+        "duration": "9:00–14:00 on trail",
         "return": "15:15"
       },
       "accessRoutes": [
         {
-          "label": "Hotel → Col Raiser parking",
+          "label": "Hotel → Col Raiser valley station",
           "originBase": "ortisei",
           "destination": "col_raiser",
           "travelMode": "driving"
         }
       ],
       "logistics": [
-        "Park at [Col Raiser valley station parking](https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena).",
-        "Lift strongly recommended: [Col Raiser valley station](https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena). Direct-Ortisei backup is [Parking + Garage Seceda](https://www.google.com/maps/search/?api=1&query=Parking+Garage+Seceda+Ortisei)."
+        "Park at Col Raiser valley station (https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena).",
+        "Lift strongly recommended: Col Raiser (https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena). Direct Seceda parking/lift (https://www.google.com/maps/search/?api=1&query=Parking+Garage+Seceda+Ortisei) is only a backup access point."
       ],
       "costs": [
         "Col Raiser round trip €32"
@@ -1412,7 +1402,7 @@
       "id": "d2_adolf_short_alt",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Val di Funes - Puez-Odle] Rifugio delle Odle via Sentiero Adolf Munkel [3 h 7 min]",
+      "title": "Adolf Munkel shorter backup",
       "linkedHikes": [
         "adolf_munkel_short"
       ],
@@ -1421,7 +1411,7 @@
       "timing": {
         "depart": "08:00",
         "arrive": "08:45",
-        "duration": "3 h 7 min",
+        "duration": "3–3.5 hr",
         "return": "14:00"
       },
       "accessRoutes": [
@@ -1433,8 +1423,8 @@
         }
       ],
       "logistics": [
-        "No lift. Park at [Zans Parking](https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss).",
-        "Reserve/check access if possible and watch the Ranui signal system."
+        "Use Zans access rules.",
+        "Shorter Odle payoff than the full classic route."
       ],
       "costs": [
         "Parking fee if applicable"
@@ -1448,14 +1438,14 @@
       "id": "d2_sellaronda_bad",
       "type": "scenic_drive",
       "base": "ortisei",
-      "title": "Sellaronda Scenic Loop [2.5–3 hr]",
+      "title": "Sellaronda scenic drive",
       "linkedDrive": "sellaronda_drive",
       "summary": "Best true bad-weather fallback from Schgaguler if Seceda is not worth committing to.",
       "whenToUse": "Use when high hiking terrain is not worth it.",
       "timing": {
         "depart": "09:00",
         "arrive": "09:35",
-        "duration": "2.5–3 hr",
+        "duration": "4–6 hr flexible",
         "return": "16:30"
       },
       "accessRoutes": [],
@@ -1473,7 +1463,7 @@
       "id": "d3_adolf_primary",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Val di Funes - Puez-Odle] Adolf Munkel Trail [~5 hr]",
+      "title": "Adolf Munkel classic day",
       "linkedHikes": [
         "adolf_munkel_primary"
       ],
@@ -1482,20 +1472,20 @@
       "timing": {
         "depart": "08:00",
         "arrive": "08:45",
-        "duration": "~5 hr",
+        "duration": "9:00–14:00",
         "return": "15:15"
       },
       "accessRoutes": [
         {
-          "label": "Hotel → Zans Parking",
+          "label": "Hotel → Zans parking",
           "originBase": "ortisei",
           "destination": "zans_parking",
           "travelMode": "driving"
         }
       ],
       "logistics": [
-        "No lift. Park at [Zans Parking](https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss).",
-        "Reserve/check access if possible and watch the Ranui signal system."
+        "No lift. Park at Zans Parking (https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss).",
+        "Reserve if possible and watch the Ranui signal system."
       ],
       "costs": [
         "Parking fee if applicable"
@@ -1509,7 +1499,7 @@
       "id": "d3_santa_alt",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Val di Funes - Santa Maddalena] Santa Maddalena: Panoramic Path [3.5–4 hr]",
+      "title": "Santa Maddalena alternate day",
       "linkedHikes": [
         "santa_maddalena_panoramic"
       ],
@@ -1531,7 +1521,7 @@
       ],
       "logistics": [
         "No lift needed.",
-        "Best parking: [Santa Maddalena village / designated parking](https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy); backup is the [Puez-Geisler Nature Park Visitor Center area](https://www.google.com/maps/search/?api=1&query=Puez-Geisler+Nature+Park+Visitor+Center+Santa+Maddalena)."
+        "Best parking: Santa Maddalena village / designated parking (https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy); visitor-center area backup (https://www.google.com/maps/search/?api=1&query=Puez-Geisler+Nature+Park+Visitor+Center+Santa+Maddalena)."
       ],
       "costs": [
         "Village parking fee locally controlled"
@@ -1545,14 +1535,14 @@
       "id": "d3_val_bad",
       "type": "scenic_drive",
       "base": "ortisei",
-      "title": "Val di Funes Scenic Drive [1.5–2 hr]",
+      "title": "Val di Funes scenic drive",
       "linkedDrive": "val_di_funes_drive",
       "summary": "Best true poor-weather replacement for Adolf Munkel from the Schgaguler base.",
       "whenToUse": "Use when summit visibility is poor or rain/storm risk is too high.",
       "timing": {
         "depart": "09:00",
         "arrive": "09:45",
-        "duration": "1.5–2 hr",
+        "duration": "3–5 hr flexible",
         "return": "15:00"
       },
       "accessRoutes": [],
@@ -1568,7 +1558,7 @@
       "id": "d4_alpe_primary",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Val di Funes - Santa Maddalena] Santa Maddalena: Panoramic Path [3.5–4 hr]",
+      "title": "Santa Maddalena / softer-weather postcard day",
       "linkedHikes": [
         "santa_maddalena_panoramic"
       ],
@@ -1590,7 +1580,7 @@
       ],
       "logistics": [
         "No lift needed.",
-        "Best parking: [Santa Maddalena village / designated parking](https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy); backup is the [Puez-Geisler Nature Park Visitor Center area](https://www.google.com/maps/search/?api=1&query=Puez-Geisler+Nature+Park+Visitor+Center+Santa+Maddalena)."
+        "Best parking: Santa Maddalena village / designated parking (https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy); visitor-center area backup (https://www.google.com/maps/search/?api=1&query=Puez-Geisler+Nature+Park+Visitor+Center+Santa+Maddalena)."
       ],
       "costs": [
         "Village parking fee locally controlled"
@@ -1604,7 +1594,7 @@
       "id": "d4_bullaccia_alt",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Alpe di Siusi - Seiser Alm] Bullaccia Tour: Witches’ Benches [3–3.5 hr]",
+      "title": "Larger Alpe di Siusi alternate day",
       "linkedHikes": [
         "bullaccia_primary"
       ],
@@ -1618,15 +1608,16 @@
       },
       "accessRoutes": [
         {
-          "label": "Hotel → Car park Silbernagl (P1)",
+          "label": "Hotel → Ortisei–Alpe di Siusi gondola",
           "originBase": "ortisei",
-          "destination": "silbernagl_p1",
+          "destination": "ortisei_alpe_gondola",
           "travelMode": "driving"
         }
       ],
       "logistics": [
-        "Lift recommended: use the [Seis–Seiser Alm cableway valley station](https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway).",
-        "Best parking: [Car park Silbernagl (P1)](https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern); early-drive fallback is [Parking P2 Compatsch](https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch)."
+        "Lift recommended: Seis–Seiser Alm cableway valley station (https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway).",
+        "Best parking: free open parking at the valley station or Car park Silbernagl (P1) (https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern).",
+        "Drive-up fallback: P2 Compatsch (https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch) if you are already on the plateau early."
       ],
       "costs": [
         "Same lift / parking costs as primary plateau access"
@@ -1640,14 +1631,14 @@
       "id": "d4_sellaronda_bad",
       "type": "scenic_drive",
       "base": "ortisei",
-      "title": "Sellaronda Scenic Loop [2.5–3 hr]",
+      "title": "Sellaronda scenic drive",
       "linkedDrive": "sellaronda_drive",
       "summary": "Best full bad-weather backup for the plateau day.",
       "whenToUse": "Use when lift/plateau weather is not worth committing to.",
       "timing": {
         "depart": "09:00",
         "arrive": "09:45",
-        "duration": "2.5–3 hr",
+        "duration": "4–6 hr flexible",
         "return": "16:00"
       },
       "accessRoutes": [],
@@ -1664,7 +1655,7 @@
       "id": "d5_transfer_cinque",
       "type": "hike",
       "base": "both",
-      "title": "Great Dolomites Road practical transfer [3.5–4 hr] + [Cinque Torri - Cortina d'Ampezzo] Cinque Torri – Averau | Nuvolau Refuge [3.5–5 hr]",
+      "title": "Kastelruth → Dobbiaco scenic transfer + Cinque Torri",
       "linkedHikes": [
         "cinque_torri_primary"
       ],
@@ -1673,7 +1664,7 @@
       "timing": {
         "depart": "08:00",
         "arrive": "10:45–11:15 at Bai de Dones",
-        "duration": "3.5–5 hr",
+        "duration": "11:30–15:15",
         "return": "16:30–17:00 at Golden Hill"
       },
       "accessRoutes": [
@@ -1692,15 +1683,15 @@
           "travelMode": "driving"
         },
         {
-          "label": "Bai de Dones parking → Golden Hill",
+          "label": "Bai de Dones → Golden Hill",
           "originPlace": "bai_de_dones",
           "destinationBase": "cortina",
           "travelMode": "driving"
         }
       ],
       "logistics": [
-        "Park at [Bai de Dones](https://www.google.com/maps/search/?api=1&query=Bai+de+Dones).",
-        "Optional chairlift from [Bai de Dones](https://www.google.com/maps/search/?api=1&query=Bai+de+Dones) if you want to skip the lower ascent."
+        "Park at Bai de Dones (https://www.google.com/maps/search/?api=1&query=Bai+de+Dones).",
+        "Optional 5 Torri chairlift from Bai de Dones (https://www.google.com/maps/search/?api=1&query=Bai+de+Dones) if you want to skip the lower ascent."
       ],
       "costs": [
         "Optional chairlift fee"
@@ -1714,14 +1705,14 @@
       "id": "d5_transfer_drive_only",
       "type": "scenic_drive",
       "base": "both",
-      "title": "Great Dolomites Road practical transfer [3.5–4 hr]",
+      "title": "Scenic transfer to Dobbiaco only",
       "linkedDrive": "great_dolomite_transfer",
       "summary": "Best if weather is not good enough to justify Cinque Torri hiking on the transfer from Schgaguler to Golden Hill.",
       "whenToUse": "Use when the drive itself will still be rewarding but the hike is not worth the effort.",
       "timing": {
         "depart": "08:30",
         "arrive": "14:30–15:30 depending stops",
-        "duration": "3.5–4 hr",
+        "duration": "Most of the day",
         "return": "Arrive Golden Hill mid-afternoon"
       },
       "accessRoutes": [],
@@ -1738,7 +1729,7 @@
       "id": "d6_trecime_primary",
       "type": "hike",
       "base": "cortina",
-      "title": "[Tre Cime - Misurina] Three Peaks of Lavaredo [3.5–4 hr] + [Tre Cime / Cadini - Misurina] Cadini di Misurina Panoramic Viewpoint via Auronzo Hut [1.5–2 hr]",
+      "title": "Tre Cime + Cadini hero day",
       "linkedHikes": [
         "tre_cime_primary",
         "cadini_primary"
@@ -1753,15 +1744,15 @@
       },
       "accessRoutes": [
         {
-          "label": "Hotel → Rifugio Auronzo parking",
+          "label": "Hotel → Rifugio Auronzo Parking",
           "originBase": "cortina",
           "destination": "auronzo_parking",
           "travelMode": "driving"
         }
       ],
       "logistics": [
-        "No lift. Drive to and park at [Rifugio Auronzo parking](https://www.google.com/maps/search/?api=1&query=Rifugio+Auronzo+Parking).",
-        "This requires the mandatory Auronzo reservation / road-access ticket."
+        "No lift. Park at Rifugio Auronzo parking (https://www.google.com/maps/search/?api=1&query=Rifugio+Auronzo+Parking).",
+        "Auronzo reservation is mandatory; same parking serves Tre Cime and Cadini."
       ],
       "costs": [
         "Auronzo road + parking €40/car"
@@ -1775,7 +1766,7 @@
       "id": "d6_cinque_alt",
       "type": "hike",
       "base": "cortina",
-      "title": "[Cinque Torri - Cortina d'Ampezzo] Cinque Torri – Averau | Nuvolau Refuge [3.5–5 hr]",
+      "title": "Cinque Torri alternate day",
       "linkedHikes": [
         "cinque_torri_primary"
       ],
@@ -1796,8 +1787,8 @@
         }
       ],
       "logistics": [
-        "Park at [Bai de Dones](https://www.google.com/maps/search/?api=1&query=Bai+de+Dones).",
-        "Optional chairlift from [Bai de Dones](https://www.google.com/maps/search/?api=1&query=Bai+de+Dones)."
+        "Park at Bai de Dones (https://www.google.com/maps/search/?api=1&query=Bai+de+Dones).",
+        "Optional 5 Torri chairlift from Bai de Dones (https://www.google.com/maps/search/?api=1&query=Bai+de+Dones)."
       ],
       "costs": [
         "Optional chairlift fee"
@@ -1811,19 +1802,19 @@
       "id": "d6_east_drive_bad",
       "type": "scenic_drive",
       "base": "cortina",
-      "title": "Passo Giau longer East scenic loop [2.5–3 hr]",
+      "title": "Passo Giau longer East scenic loop",
       "linkedDrive": "east_bad_weather_loop",
       "summary": "Longer true bad-weather replacement for the Auronzo hero day if you still want a full road-trip day from Golden Hill.",
       "whenToUse": "Use when cloud cover or storm risk makes the Auronzo reservation not worthwhile.",
       "timing": {
         "depart": "09:00",
         "arrive": "09:30",
-        "duration": "2.5–3 hr",
+        "duration": "4–6 hr flexible",
         "return": "16:00"
       },
       "accessRoutes": [],
       "logistics": [
-        "Good road-based East-side scenery with easy stops from Golden Hill."
+        "Good road-based East-side scenery with easy stops."
       ],
       "costs": [
         "Standard road/fuel costs"
@@ -1835,7 +1826,7 @@
       "id": "d7_sorapis_primary",
       "type": "hike",
       "base": "cortina",
-      "title": "[Lago di Sorapis - Cortina d'Ampezzo] Lake Sorapis via Passo Tre Croci [4.5–5.5 hr]",
+      "title": "East-side weather-flex hike day",
       "linkedHikes": [
         "sorapis_primary"
       ],
@@ -1844,19 +1835,19 @@
       "timing": {
         "depart": "07:30",
         "arrive": "07:50",
-        "duration": "4.5–5.5 hr",
+        "duration": "8:00–13:00",
         "return": "14:00"
       },
       "accessRoutes": [
         {
-          "label": "Hotel → Passo Tre Croci parking area",
+          "label": "Hotel → Passo Tre Croci",
           "originBase": "cortina",
           "destination": "passo_tre_croci",
           "travelMode": "driving"
         }
       ],
       "logistics": [
-        "No lift. Park near the [Passo Tre Croci trailhead area](https://www.google.com/maps/search/?api=1&query=Passo+Tre+Croci).",
+        "No lift. Park near Passo Tre Croci (https://www.google.com/maps/search/?api=1&query=Passo+Tre+Croci).",
         "Arrive early because parking is limited."
       ],
       "costs": [
@@ -1871,7 +1862,7 @@
       "id": "d7_trecime_swap_alt",
       "type": "hike",
       "base": "cortina",
-      "title": "[Tre Cime - Misurina] Three Peaks of Lavaredo [3.5–4 hr] + [Tre Cime / Cadini - Misurina] Cadini di Misurina Panoramic Viewpoint via Auronzo Hut [1.5–2 hr]",
+      "title": "Tre Cime + Cadini swap day",
       "linkedHikes": [
         "tre_cime_primary",
         "cadini_primary"
@@ -1893,8 +1884,8 @@
         }
       ],
       "logistics": [
-        "No lift. Drive to and park at [Rifugio Auronzo parking](https://www.google.com/maps/search/?api=1&query=Rifugio+Auronzo+Parking).",
-        "This requires the mandatory Auronzo reservation / road-access ticket."
+        "No lift. Park at Rifugio Auronzo parking (https://www.google.com/maps/search/?api=1&query=Rifugio+Auronzo+Parking).",
+        "Auronzo reservation is mandatory if you swap Tre Cime into Day 7."
       ],
       "costs": [
         "Auronzo road + parking €40/car"
@@ -1908,19 +1899,19 @@
       "id": "d7_east_drive_bad",
       "type": "scenic_drive",
       "base": "cortina",
-      "title": "Passo Giau longer East scenic loop [2.5–3 hr]",
+      "title": "Passo Giau longer East scenic loop",
       "linkedDrive": "east_bad_weather_loop",
       "summary": "Longer East-side scenic fallback on the final Dolomites day if you want a fuller drive than the Misurina corridor.",
       "whenToUse": "Use when a full Sorapis hike is not worth it.",
       "timing": {
         "depart": "09:00",
         "arrive": "09:30",
-        "duration": "2.5–3 hr",
+        "duration": "4–6 hr flexible",
         "return": "16:00"
       },
       "accessRoutes": [],
       "logistics": [
-        "Good road-based East-side scenery with easy stops from Golden Hill."
+        "Flexible final-day road loop."
       ],
       "costs": [
         "Standard road/fuel costs"
@@ -1932,7 +1923,7 @@
       "id": "d8_venice_transfer",
       "type": "transfer",
       "base": "cortina",
-      "title": "Golden Hill → Venice transfer [~2.5 hr]",
+      "title": "Golden Hill → Venice transfer",
       "linkedHikes": [],
       "summary": "Simple exit day from Golden Hill with optional Misurina stop if weather is beautiful.",
       "whenToUse": "Use on departure day.",
@@ -1972,7 +1963,7 @@
       "id": "d1_alpe_primary",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Alpe di Siusi - Seiser Alm] Monte Piz – Schgaguler Hut via Monte Sëuc [2–2.5 hr]",
+      "title": "Arrival-day Alpe di Siusi ROI hike",
       "linkedHikes": [
         "monte_piz_primary"
       ],
@@ -1981,26 +1972,26 @@
       "timing": {
         "depart": "11:30",
         "arrive": "11:50",
-        "duration": "2–2.5 hr",
+        "duration": "12:15–14:45 on trail",
         "return": "15:30–16:00"
       },
       "accessRoutes": [
         {
-          "label": "Hotel → Garage Mont Sëuc parking",
+          "label": "Hotel → Ortisei–Alpe di Siusi gondola",
           "originBase": "ortisei",
-          "destination": "garage_mont_seuc",
+          "destination": "ortisei_alpe_gondola",
           "travelMode": "driving"
         },
         {
-          "label": "Garage Mont Sëuc parking → Ortisei town after hike",
-          "originPlace": "garage_mont_seuc",
+          "label": "Hotel → Ortisei town after hike",
+          "originBase": "ortisei",
           "destination": "ortisei_town",
           "travelMode": "driving"
         }
       ],
       "logistics": [
-        "Lift recommended: use the [Ortisei–Alpe di Siusi / Mont Sëuc gondola valley station](https://www.google.com/maps/search/?api=1&query=Ortisei+Alpe+di+Siusi+Gondola).",
-        "Best parking: [Garage Mont Sëuc](https://www.google.com/maps/search/?api=1&query=Garage+Mont+Seuc+Ortisei) right at the lift station.",
+        "Lift recommended: Ortisei–Alpe di Siusi / Mont Sëuc gondola (https://www.google.com/maps/search/?api=1&query=Ortisei+Alpe+di+Siusi+Gondola).",
+        "Best parking: Garage Mont Sëuc (https://www.google.com/maps/search/?api=1&query=Garage+Mont+Seuc+Ortisei) right at the lift station.",
         "Use lift access to skip the less interesting approach and keep time for Ortisei town later."
       ],
       "costs": [
@@ -2015,7 +2006,7 @@
       "id": "d1_tschotsch_alt",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Alpe di Siusi - Seiser Alm] Tschötsch Alm – Puflatsch Bergstation [1.5–2 hr]",
+      "title": "Shorter arrival-day Alpe di Siusi option",
       "linkedHikes": [
         "tschotsch_short"
       ],
@@ -2029,16 +2020,22 @@
       },
       "accessRoutes": [
         {
-          "label": "Hotel → Car park Silbernagl (P1)",
+          "label": "Hotel → Seis-Seiser Alm cableway valley station",
           "originBase": "ortisei",
-          "destination": "silbernagl_p1",
+          "destination": "seis_cableway",
+          "travelMode": "driving"
+        },
+        {
+          "label": "Hotel → Ortisei town after hike",
+          "originBase": "ortisei",
+          "destination": "ortisei_town",
           "travelMode": "driving"
         }
       ],
       "logistics": [
-        "Lift recommended: use the [Seis–Seiser Alm cableway valley station](https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway).",
-        "Best parking: [Car park Silbernagl (P1)](https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern); early-drive fallback is [Parking P2 Compatsch](https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch).",
-        "Best short scenic plateau option if you want a lower-commitment Day 1."
+        "Lift recommended: Seis–Seiser Alm cableway valley station (https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway).",
+        "Best parking: free open parking at the valley station or Car park Silbernagl (P1) (https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern).",
+        "Drive-up fallback: P2 Compatsch (https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch) if you are already on the plateau early."
       ],
       "costs": [
         "Lift or parking fees apply"
@@ -2052,19 +2049,20 @@
       "id": "d6_misurina_drive_bad",
       "type": "scenic_drive",
       "base": "cortina",
-      "title": "Tre Cime / Misurina approach mini-drive [1–1.5 hr]",
+      "title": "Tre Cime / Misurina mini-drive",
       "linkedDrive": "tre_cime_misurina_drive",
       "summary": "Closest low-commitment scenic replacement from Golden Hill if the Auronzo reservation or upper-hike weather is not worth forcing.",
       "whenToUse": "Use when visibility is mixed or unstable and you want a nearby half-day fallback rather than a long road loop.",
       "timing": {
         "depart": "09:00",
         "arrive": "09:25",
-        "duration": "1–1.5 hr",
+        "duration": "2–4 hr flexible",
         "return": "13:30–14:30"
       },
       "accessRoutes": [],
       "logistics": [
-        "Short East-side lake-and-white-rock fallback from Golden Hill with easy roadside stops."
+        "Easy East-side lake-and-corridor fallback from Golden Hill.",
+        "Can stay short or stretch with photo stops."
       ],
       "costs": [
         "Standard road/fuel costs"
@@ -2076,19 +2074,19 @@
       "id": "d7_misurina_drive_alt",
       "type": "scenic_drive",
       "base": "cortina",
-      "title": "Tre Cime / Misurina approach mini-drive [1–1.5 hr]",
+      "title": "Tre Cime / Misurina mini-drive",
       "linkedDrive": "tre_cime_misurina_drive",
       "summary": "Closest half-day scenic fallback from Golden Hill if you do not want to commit to Sorapis on the final full day.",
       "whenToUse": "Use when weather is mixed or energy is lower and you want a shorter drive than Passo Giau.",
       "timing": {
         "depart": "09:00",
         "arrive": "09:25",
-        "duration": "1–1.5 hr",
+        "duration": "2–4 hr flexible",
         "return": "13:30–14:30"
       },
       "accessRoutes": [],
       "logistics": [
-        "Short East-side lake-and-white-rock fallback from Golden Hill with easy roadside stops."
+        "Easy to pair with a relaxed Dobbiaco afternoon."
       ],
       "costs": [
         "Standard road/fuel costs"
@@ -2100,7 +2098,7 @@
       "id": "d1_family_alt",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Alpe di Siusi - Seiser Alm] Alpe di Siusi Family Tour [2–2.5 hr]",
+      "title": "Easy arrival-day Alpe di Siusi family-style option",
       "linkedHikes": [
         "alpe_family_tour"
       ],
@@ -2114,16 +2112,16 @@
       },
       "accessRoutes": [
         {
-          "label": "Hotel → Car park Silbernagl (P1)",
+          "label": "Hotel → Seis-Seiser Alm cableway valley station",
           "originBase": "ortisei",
-          "destination": "silbernagl_p1",
+          "destination": "seis_cableway",
           "travelMode": "driving"
         }
       ],
       "logistics": [
-        "Lift recommended: use the [Seis–Seiser Alm cableway valley station](https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway).",
-        "Best parking: [Car park Silbernagl (P1)](https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern); early-drive fallback is [Parking P2 Compatsch](https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch).",
-        "Easy meadow-forward option with very little unpretty approach."
+        "Lift recommended: Seis–Seiser Alm cableway valley station (https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway).",
+        "Best parking: free open parking at the valley station or Car park Silbernagl (P1) (https://www.google.com/maps/search/?api=1&query=Car+park+Silbernagl+P1+Seis+am+Schlern).",
+        "Drive-up fallback: P2 Compatsch (https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch) if you are already on the plateau early."
       ],
       "costs": [
         "Seis cable car fare or plateau parking fees apply."
@@ -2137,7 +2135,7 @@
       "id": "d4_urtijei_alt",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Alpe di Siusi - Seiser Alm] Urtijëi - Seiser Alm [3.5–4 hr]",
+      "title": "Longer Alpe di Siusi alternate day",
       "linkedHikes": [
         "urtijei_seiser_alm"
       ],
@@ -2151,15 +2149,15 @@
       },
       "accessRoutes": [
         {
-          "label": "Hotel → Garage Mont Sëuc parking",
+          "label": "Hotel → Ortisei–Alpe di Siusi gondola",
           "originBase": "ortisei",
-          "destination": "garage_mont_seuc",
+          "destination": "ortisei_alpe_gondola",
           "travelMode": "driving"
         }
       ],
       "logistics": [
-        "Lift recommended: use the [Ortisei–Alpe di Siusi / Mont Sëuc gondola valley station](https://www.google.com/maps/search/?api=1&query=Ortisei+Alpe+di+Siusi+Gondola).",
-        "Best parking: [Garage Mont Sëuc](https://www.google.com/maps/search/?api=1&query=Garage+Mont+Seuc+Ortisei) right at the lift station."
+        "Lift recommended: Ortisei–Alpe di Siusi / Mont Sëuc gondola (https://www.google.com/maps/search/?api=1&query=Ortisei+Alpe+di+Siusi+Gondola).",
+        "Best parking: Garage Mont Sëuc (https://www.google.com/maps/search/?api=1&query=Garage+Mont+Seuc+Ortisei) at the lift station."
       ],
       "costs": [
         "Ortisei–Alpe di Siusi gondola €35 round trip; parking extra."
@@ -2173,7 +2171,7 @@
       "id": "d3_zans_glatsch_alt",
       "type": "hike",
       "base": "ortisei",
-      "title": "[Val di Funes - Puez-Odle] Zans | Zannes - Malga Glatsch Alm [3.5–4.5 hr]",
+      "title": "Lighter Zans / Glatsch Alm alternate day",
       "linkedHikes": [
         "zans_glatsch"
       ],
@@ -2187,14 +2185,14 @@
       },
       "accessRoutes": [
         {
-          "label": "Hotel → Zans Parking",
+          "label": "Hotel → Zans parking",
           "originBase": "ortisei",
           "destination": "zans_parking",
           "travelMode": "driving"
         }
       ],
       "logistics": [
-        "No lift. Park at [Zans Parking](https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss).",
+        "No lift. Park at Zans Parking (https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss).",
         "Reserve/check access if possible and watch the Ranui signal system."
       ],
       "costs": [
