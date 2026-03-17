@@ -26,7 +26,7 @@ GitHub Pages-ready static site with offline support after first online load.
 
 ## Cache versioning
 Current cache name:
-`dolomites-trip-dashboard-v5-20260312`
+`dolomites-trip-dashboard-v6-20260317`
 
 Whenever you update the site files, bump the cache name in `sw.js` so users receive the new version.
 

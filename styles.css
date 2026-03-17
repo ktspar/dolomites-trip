@@ -274,3 +274,53 @@ label.field-label {
   .section-header, .section-body, .day-card { padding-left: 14px; padding-right: 14px; }
   .day-head { flex-direction: column; }
 }
+
+
+.rich-text a { word-break: break-word; }
+.rich-text p { margin: 0; }
+.inline-meta {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.72rem;
+  vertical-align: middle;
+}
+.subtle-label {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.booking-links { margin-top: 10px; }
+.booking-links .plain-list { margin-top: 6px; }
+
+
+.overview-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+.overview-link-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong, var(--accent));
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.overview-link-pill:hover {
+  text-decoration: underline;
+}
+.metric-card .muted .overview-link-list {
+  margin-top: 6px;
+}

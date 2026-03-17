@@ -2,7 +2,100 @@
   "trip": {
     "title": "Dolomites Trip Dashboard",
     "routeSummary": "Lake Garda → Schgaguler Hotel (Kastelruth) → Golden Hill (Dobbiaco / Toblach) → Venice",
-    "intro": "Built for deep trip operations while traveling: dynamic hotel routes, base-aware recommendations, primary/alternate/bad-weather plans, and quick links to Google Maps, AllTrails, and booking pages. Internal base IDs are kept for web compatibility, but the live trip is optimized for Schgaguler Hotel in Kastelruth on the West side and Golden Hill in Dobbiaco / Toblach on the East side."
+    "intro": "Built for deep trip operations while traveling: dynamic hotel routes, base-aware recommendations, primary/alternate/bad-weather plans, and quick links to Google Maps, AllTrails, and booking pages. Internal base IDs are kept for web compatibility, but the live trip is optimized for Schgaguler Hotel in Kastelruth on the West side and Golden Hill in Dobbiaco / Toblach on the East side.",
+    "overviewCards": {
+      "topPriorities": [
+        {
+          "type": "hike",
+          "id": "seceda_primary",
+          "label": "Seceda"
+        },
+        {
+          "type": "hike",
+          "id": "adolf_munkel_primary",
+          "label": "Adolf Munkel"
+        },
+        {
+          "type": "hike",
+          "id": "hans_paula_primary",
+          "label": "Hans & Paula Steger"
+        },
+        {
+          "type": "hike",
+          "id": "santa_maddalena_panoramic",
+          "label": "Santa Maddalena"
+        },
+        {
+          "type": "hike",
+          "id": "cinque_torri_primary",
+          "label": "Cinque Torri"
+        },
+        {
+          "type": "hike",
+          "id": "tre_cime_primary",
+          "label": "Tre Cime"
+        },
+        {
+          "type": "hike",
+          "id": "cadini_primary",
+          "label": "Cadini"
+        },
+        {
+          "type": "hike",
+          "id": "sorapis_primary",
+          "label": "Lago di Sorapis"
+        }
+      ],
+      "bestBluebirdTargets": [
+        {
+          "type": "hike",
+          "id": "seceda_primary",
+          "label": "Seceda"
+        },
+        {
+          "type": "hike",
+          "id": "tre_cime_primary",
+          "label": "Tre Cime"
+        },
+        {
+          "type": "hike",
+          "id": "cadini_primary",
+          "label": "Cadini"
+        },
+        {
+          "type": "hike",
+          "id": "cinque_torri_primary",
+          "label": "Cinque Torri"
+        },
+        {
+          "type": "hike",
+          "id": "sorapis_primary",
+          "label": "Sorapis"
+        }
+      ],
+      "bestMixedWeatherTargets": [
+        {
+          "type": "hike",
+          "id": "adolf_munkel_primary",
+          "label": "Adolf Munkel"
+        },
+        {
+          "type": "hike",
+          "id": "santa_maddalena_panoramic",
+          "label": "Santa Maddalena"
+        },
+        {
+          "type": "hike",
+          "id": "hans_paula_primary",
+          "label": "Hans & Paula Steger"
+        },
+        {
+          "type": "drive",
+          "id": "val_di_funes_drive",
+          "label": "Val di Funes drive"
+        }
+      ]
+    }
   },
   "bases": [
     {
@@ -1260,26 +1353,101 @@
     {
       "category": "Book now",
       "item": "Tre Cime / Auronzo road access",
-      "note": "Mandatory for Day 6; reserve when date opens. [Official Auronzo reservation / parking page](https://auronzo.info/en/parking-tre-cime-di-lavaredo/)",
-      "link": "https://auronzo.info/en/parking-tre-cime-di-lavaredo/"
+      "note": "Mandatory for the Tre Cime + Cadini day. Reservation and payment are online only; permit is valid for 12 hours from your booked access time.",
+      "link": "https://auronzo.info/en/parking-tre-cime-di-lavaredo/",
+      "official": true,
+      "appliesTo": [
+        "tre_cime_primary",
+        "cadini_primary",
+        "auronzo_parking"
+      ]
     },
     {
       "category": "Check closer to trip",
-      "item": "Zans parking / Ranui signal system",
-      "note": "Review the current Zans / Ranui reservation-access rules before the Adolf Munkel day. [Current Zans / Ranui access notes](https://wildconnectionsphotography.com/new-2026-access-restrictions-in-the-dolomites/)",
-      "link": "https://wildconnectionsphotography.com/new-2026-access-restrictions-in-the-dolomites/"
+      "item": "Zans parking / Ranui access rules",
+      "note": "Review current Zans / Ranui access before the Adolf Munkel day. This is a practical planning reference, not an official booking portal.",
+      "link": "https://wildconnectionsphotography.com/new-2026-access-restrictions-in-the-dolomites/",
+      "official": false,
+      "appliesTo": [
+        "adolf_munkel_primary",
+        "adolf_munkel_short",
+        "zans_parking"
+      ]
     },
     {
       "category": "Can do day-of",
       "item": "Col Raiser lift",
-      "note": "Day-of purchase usually fine if you arrive early. [Col Raiser official site](https://www.colraiser.it/en/)",
-      "link": "https://www.colraiser.it/en/"
+      "note": "Best for Seceda days. You can buy on site or online; day-of is usually fine if you arrive early.",
+      "link": "https://www.colraiser.it/en/summer.asp",
+      "official": true,
+      "appliesTo": [
+        "seceda_primary",
+        "seceda_secondary",
+        "col_raiser"
+      ]
     },
     {
       "category": "Can do day-of",
-      "item": "Ortisei–Alpe di Siusi gondola",
-      "note": "Day-of purchase usually fine. [Seiser Alm cable cars / tickets](https://www.seiseralm.it/en/active/summer-holidays/hiking/cable-cars.html)",
-      "link": "https://www.seiseralm.it/en/active/summer-holidays/hiking/cable-cars.html"
+      "item": "Col Raiser prices / opening hours",
+      "note": "Useful for quick fare and timing confirmation before your Seceda day.",
+      "link": "https://www.colraiser.it/en/info.asp",
+      "official": true,
+      "appliesTo": [
+        "seceda_primary",
+        "seceda_secondary",
+        "col_raiser"
+      ]
+    },
+    {
+      "category": "Can do day-of",
+      "item": "Seiser Alm / Alpe di Siusi lifts",
+      "note": "Best lift-planning page for the Alpe di Siusi day, including current operating lifts and ticket context.",
+      "link": "https://www.seiseralm.it/en/info/getting-around/seiser-alm-aerial-cableway-winter/open-lifts-cable-cars.html",
+      "official": true,
+      "appliesTo": [
+        "hans_paula_primary",
+        "bullaccia_secondary",
+        "ortisei_alpe_gondola",
+        "seis_cableway"
+      ]
+    },
+    {
+      "category": "Can do day-of",
+      "item": "Seiser Alm traffic regulation / plateau parking",
+      "note": "Use this for the Compatsch road-restriction rules and current plateau parking guidance.",
+      "link": "https://www.seiseralm.it/en/info/getting-around/traffic-regulation.html",
+      "official": true,
+      "appliesTo": [
+        "hans_paula_primary",
+        "bullaccia_secondary",
+        "p1_spitzbuhl",
+        "p2_compatsch",
+        "compatsch"
+      ]
+    },
+    {
+      "category": "Can do day-of",
+      "item": "Seiser Alm valley-station parking",
+      "note": "Useful if you plan to use the Seis cableway / Silbernagl parking instead of the Ortisei side.",
+      "link": "https://www.seiseralm.it/en/info/getting-around/seiser-alm-aerial-cableway-winter.html",
+      "official": true,
+      "appliesTo": [
+        "hans_paula_primary",
+        "bullaccia_secondary",
+        "seis_cableway",
+        "silbernagl_p1"
+      ]
+    },
+    {
+      "category": "Can do day-of",
+      "item": "5 Torri chairlift online ticket",
+      "note": "Optional for the Cinque Torri day if you want to skip some lower ascent and reduce effort.",
+      "link": "https://5torri.it/EN/p37-Online-Ticket",
+      "official": true,
+      "appliesTo": [
+        "cinque_torri_primary",
+        "bai_de_dones"
+      ]
     }
   ],
   "planCards": {

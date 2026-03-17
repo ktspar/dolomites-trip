@@ -7,8 +7,8 @@ const state = {
   selectedVibe: 'green_meadows',
   selectedCommitment: 'any',
   hotelSelection: {
-    ortisei: { presetId: 'gardena_grodnerhof', customEnabled: false, customName: '', customMapLink: '', customMapQuery: '' },
-    cortina: { presetId: 'hotel_de_len', customEnabled: false, customName: '', customMapLink: '', customMapQuery: '' }
+    ortisei: { presetId: null, customEnabled: false, customName: '', customMapLink: '', customMapQuery: '' },
+    cortina: { presetId: null, customEnabled: false, customName: '', customMapLink: '', customMapQuery: '' }
   },
   openDays: new Set(),
 };
@@ -44,6 +44,7 @@ async function init() {
   try {
     const res = await fetch('./trip-data.json');
     data = await res.json();
+    initializeHotelSelection();
     render();
     registerServiceWorker();
   } catch (e) {
@@ -57,6 +58,66 @@ function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js').catch(console.error);
   }
+}
+
+function initializeHotelSelection() {
+  if (!data?.hotels) return;
+  ['ortisei', 'cortina'].forEach(base => {
+    const cfg = data.hotels?.[base];
+    if (!cfg) return;
+    const fallbackId = cfg.defaultHotelId || cfg.presetHotels?.[0]?.id || null;
+    if (!state.hotelSelection[base].presetId || !cfg.presetHotels.some(h => h.id === state.hotelSelection[base].presetId)) {
+      state.hotelSelection[base].presetId = fallbackId;
+    }
+  });
+}
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function formatRichText(input) {
+  if (input === null || input === undefined) return '';
+  const text = String(input);
+  let html = escapeHtml(text);
+  html = html.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  html = html.replace(/(^|[\s(>])((https?:\/\/[^\s<]+))/g, (match, prefix, url) => {
+    if (prefix.includes('href=&quot;')) return match;
+    const cleanUrl = url.replace(/[),.;!?]+$/,'');
+    const trailing = url.slice(cleanUrl.length);
+    return `${prefix}<a href="${cleanUrl}" target="_blank" rel="noopener">${cleanUrl}</a>${trailing}`;
+  });
+  return html;
+}
+
+function listOrText(items) {
+  if (!Array.isArray(items)) return formatRichText(items);
+  return `<ul class="plain-list">${items.map(i => `<li>${formatRichText(i)}</li>`).join('')}</ul>`;
+}
+
+function getRelevantBookingRowsForPlan(plan) {
+  const bookingRows = data?.bookings || [];
+  const tokens = new Set();
+  (plan.linkedHikes || []).forEach(id => tokens.add(id));
+  (plan.accessRoutes || []).forEach(route => {
+    ['destination', 'originPlace'].forEach(key => { if (route[key]) tokens.add(route[key]); });
+    (route.waypoints || []).forEach(id => tokens.add(id));
+  });
+  if (plan.linkedDrive) tokens.add(plan.linkedDrive);
+  return bookingRows.filter(row => Array.isArray(row.appliesTo) && row.appliesTo.some(token => tokens.has(token)));
+}
+
+function renderBookingSummary(plan) {
+  const textBlock = plan.bookings?.length ? listOrText(plan.bookings) : '<div class="muted">Day-of is usually fine.</div>';
+  const rows = getRelevantBookingRowsForPlan(plan);
+  if (!rows.length) return textBlock;
+  const links = rows.map(row => `<li><a href="${row.link}" target="_blank" rel="noopener">${escapeHtml(row.item)}</a>${row.official ? ' <span class="inline-meta">Official</span>' : ''} — ${formatRichText(row.note)}</li>`).join('');
+  return `${textBlock}<div class="booking-links"><div class="subtle-label">Useful booking links</div><ul class="plain-list">${links}</ul></div>`;
 }
 
 function getSelectedHotel(base) {
@@ -121,8 +182,8 @@ function el(tag, className, html) {
 
 function updateTopBar() {
   document.getElementById('top-current-base').textContent = `Base: ${data.bases.find(b => b.id === state.selectedBase).label}`;
-  document.getElementById('top-ortisei-hotel').textContent = `Ortisei hotel: ${getSelectedHotel('ortisei').name}`;
-  document.getElementById('top-cortina-hotel').textContent = `Cortina hotel: ${getSelectedHotel('cortina').name}`;
+  document.getElementById('top-ortisei-hotel').textContent = `${data.hotels.ortisei.label.replace(/ \(default:.*\)$/,'')}: ${getSelectedHotel('ortisei').name}`;
+  document.getElementById('top-cortina-hotel').textContent = `${data.hotels.cortina.label.replace(/ \(default:.*\)$/,'')}: ${getSelectedHotel('cortina').name}`;
 }
 
 function render() {
@@ -149,8 +210,8 @@ function renderOverview() {
     <h3>Route</h3>
     <p>${data.trip.routeSummary}</p>
     <div class="status-row">
-      <span class="badge accent">4 nights Ortisei</span>
-      <span class="badge accent">3 nights Cortina</span>
+      <span class="badge accent">4 nights Schgaguler</span>
+      <span class="badge accent">3 nights Golden Hill</span>
       <span class="badge">Overview first</span>
       <span class="badge">Mobile-first dashboard</span>
     </div>
@@ -159,14 +220,34 @@ function renderOverview() {
       <a href="#decision-tools">Open Decision Tools</a>
       <a href="#access-booking">Check Booking Items</a>
     </div>`;
+  const cards = data.trip.overviewCards || {};
   const right = el('div', 'cards-grid two');
-  right.appendChild(metricCard('Top priorities', 'Seceda, Adolf Munkel, Hans & Paula Steger, Santa Maddalena, Cinque Torri, Tre Cime + Cadini, Lago di Sorapis'));
+  right.appendChild(metricCard('Top priorities', renderOverviewTargetLinks(cards.topPriorities || [])));
   right.appendChild(metricCard('Must-book item', 'Tre Cime / Auronzo road access is the main reservation-critical item.'));
-  right.appendChild(metricCard('Best bluebird targets', 'Seceda, Tre Cime + Cadini, Cinque Torri, Sorapis'));
-  right.appendChild(metricCard('Best mixed-weather targets', 'Adolf Munkel, Santa Maddalena, Hans & Paula Steger, Val di Funes drive'));
+  right.appendChild(metricCard('Best bluebird targets', renderOverviewTargetLinks(cards.bestBluebirdTargets || [])));
+  right.appendChild(metricCard('Best mixed-weather targets', renderOverviewTargetLinks(cards.bestMixedWeatherTargets || [])));
   grid.appendChild(left); grid.appendChild(right); body.appendChild(grid); return section;
 }
-function metricCard(title, text) { return el('div', 'metric-card', `<h3>${title}</h3><p class="muted">${text}</p>`); }
+function metricCard(title, contentHtml) { return el('div', 'metric-card', `<h3>${title}</h3><div class="muted">${contentHtml}</div>`); }
+
+function renderOverviewTargetLinks(items) {
+  if (!Array.isArray(items) || !items.length) return '';
+  return `<div class="overview-link-list">${items.map(renderOverviewTargetLink).join('')}</div>`;
+}
+
+function renderOverviewTargetLink(item) {
+  const label = escapeHtml(item?.label || item?.id || 'Open');
+  let href = '';
+  if (item?.type === 'hike') {
+    const hike = data.hikes?.[item.id];
+    href = hike?.allTrailsUrl || '';
+  } else if (item?.type === 'drive') {
+    const drive = data.drives?.[item.id];
+    href = buildDriveRouteLink(drive) || '';
+  }
+  if (!href) return `<span class="badge">${label}</span>`;
+  return `<a class="overview-link-pill" href="${href}" target="_blank" rel="noopener">${label}</a>`;
+}
 
 function renderControls() {
   const section = sectionShell('controls', 'Current Base & Hotel Controls', 'Base-aware recommendations and hotel-aware routes. Changing a hotel updates route links that start or end there.');
@@ -358,8 +439,8 @@ function renderPlanCard(plan) {
   const tagRow = el('div', 'tag-row'); tagRow.appendChild(badge(`Base: ${plan.base === 'both' ? 'Transfer' : baseLabel(plan.base)}`));
   if (plan.linkedHikes?.length) { const first = data.hikes[plan.linkedHikes[0]]; if (first?.difficulty) tagRow.appendChild(badge(first.difficulty)); if (first?.duration) tagRow.appendChild(badge(first.duration)); }
   if (plan.type === 'scenic_drive') tagRow.appendChild(badge('Scenic drive', 'warn')); card.appendChild(tagRow);
-  const meta = el('div', 'plan-meta'); meta.appendChild(miniCard('When to use', plan.whenToUse)); meta.appendChild(miniCard('Timing', `${plan.timing.depart} depart · ${plan.timing.arrive} arrive · ${plan.timing.duration} · ${plan.timing.return} back`)); meta.appendChild(miniCard('Logistics', listOrText(plan.logistics))); meta.appendChild(miniCard('Mental map', plan.mentalMap)); card.appendChild(meta);
-  const extra = el('div', 'plan-meta'); extra.appendChild(miniCard('Cost summary', plan.costs?.length ? listOrText(plan.costs) : 'No special cost beyond standard road/parking where applicable.')); extra.appendChild(miniCard('Booking summary', plan.bookings?.length ? listOrText(plan.bookings) : 'Day-of is usually fine.')); card.appendChild(extra); return card;
+  const meta = el('div', 'plan-meta'); meta.appendChild(miniCard('When to use', formatRichText(plan.whenToUse))); meta.appendChild(miniCard('Timing', formatRichText(`${plan.timing.depart} depart · ${plan.timing.arrive} arrive · ${plan.timing.duration} · ${plan.timing.return} back`))); meta.appendChild(miniCard('Logistics', listOrText(plan.logistics))); meta.appendChild(miniCard('Mental map', formatRichText(plan.mentalMap))); card.appendChild(meta);
+  const extra = el('div', 'plan-meta'); extra.appendChild(miniCard('Cost summary', plan.costs?.length ? listOrText(plan.costs) : 'No special cost beyond standard road/parking where applicable.')); extra.appendChild(miniCard('Booking summary', renderBookingSummary(plan))); card.appendChild(extra); return card;
 }
 
 function buildQuickActionsForPlan(planId) {
@@ -387,7 +468,7 @@ function renderHikeGroup(title, hikeIds) {
   const wrap = el('div'); wrap.style.marginTop = '6px'; wrap.appendChild(el('h3', '', title));
   hikeIds.forEach(id => {
     const hike = data.hikes[id]; const details = document.createElement('details'); details.className = 'library-card';
-    details.innerHTML = `<summary><div><strong>${hike.name}</strong><div class="muted" style="margin-top:4px;">${hike.reason}</div><div class="tag-row">${renderApplicableTagBadges(hike.weather, hike.energy, hike.tags, hike.commitment)}</div></div><div class="chip-row"><span class="badge">${baseLabel(hike.bestBase)}</span><span class="badge">${hike.duration}</span></div></summary><div class="library-body"><div class="link-list"><a href="${hike.allTrailsUrl}" target="_blank" rel="noopener">AllTrails</a></div><div class="tag-row"><span class="badge">Difficulty: ${hike.difficulty}</span><span class="badge">Gain: ${hike.gain}</span><span class="badge">Crowd: ${hike.crowd}</span><span class="badge">Commitment: ${labelCommitment(hike.commitment)}</span></div><div class="plan-meta"><div class="mini-card"><h5>Why it fits</h5><div class="muted">${hike.reason}</div></div><div class="mini-card"><h5>Access</h5><div class="muted">${hike.access}</div></div><div class="mini-card"><h5>Cost</h5><div class="muted">${hike.cost}</div></div><div class="mini-card"><h5>Booking</h5><div class="muted">${hike.booking}</div></div></div></div>`;
+    details.innerHTML = `<summary><div><strong>${hike.name}</strong><div class="muted" style="margin-top:4px;">${hike.reason}</div><div class="tag-row">${renderApplicableTagBadges(hike.weather, hike.energy, hike.tags, hike.commitment)}</div></div><div class="chip-row"><span class="badge">${baseLabel(hike.bestBase)}</span><span class="badge">${hike.duration}</span></div></summary><div class="library-body"><div class="link-list"><a href="${hike.allTrailsUrl}" target="_blank" rel="noopener">AllTrails</a></div><div class="tag-row"><span class="badge">Difficulty: ${hike.difficulty}</span><span class="badge">Gain: ${hike.gain}</span><span class="badge">Crowd: ${hike.crowd}</span><span class="badge">Commitment: ${labelCommitment(hike.commitment)}</span></div><div class="plan-meta"><div class="mini-card"><h5>Why it fits</h5><div class="muted rich-text">${formatRichText(hike.reason)}</div></div><div class="mini-card"><h5>Access</h5><div class="muted rich-text">${formatRichText(hike.access)}</div></div><div class="mini-card"><h5>Cost</h5><div class="muted rich-text">${formatRichText(hike.cost)}</div></div><div class="mini-card"><h5>Booking</h5><div class="muted rich-text">${formatRichText(hike.booking)}</div></div></div></div>`;
     wrap.appendChild(details);
   });
   return wrap;
@@ -422,8 +503,7 @@ function renderAccessBooking() {
 function sectionShell(id, title, subtitle) {
   const section = el('section', 'section'); section.id = id; section.innerHTML = `<div class="section-header"><h2>${title}</h2><p>${subtitle}</p></div><div class="section-body"></div>`; return section;
 }
-function miniCard(title, content) { return el('div', 'mini-card', `<h5>${title}</h5><div class="muted">${content}</div>`); }
-function listOrText(items) { if (!Array.isArray(items)) return items; return `<ul class="plain-list">${items.map(i => `<li>${i}</li>`).join('')}</ul>`; }
+function miniCard(title, content) { return el('div', 'mini-card', `<h5>${title}</h5><div class="muted rich-text">${content}</div>`); }
 function linkEl(label, href) { const a = document.createElement('a'); a.href = href; if (!href.startsWith('#')) { a.target = '_blank'; a.rel = 'noopener'; } a.textContent = label; return a; }
 function badge(text, cls = '') { return el('span', `badge ${cls}`.trim(), text); }
 function labelCommitment(val) { return ({ must_reserve: 'Must reserve', reserve_if_possible: 'Better to reserve', day_of_ok: 'Easy day-of', easy_day_of: 'Easy day-of' })[val] || val; }

@@ -1,0 +1,1630 @@
+{
+  "trip": {
+    "title": "Dolomites Trip Dashboard",
+    "routeSummary": "Lake Garda → Ortisei → Cortina → Venice",
+    "intro": "Built for deep trip operations while traveling: dynamic hotel routes, base-aware recommendations, primary/alternate/bad-weather plans, and quick links to Google Maps, AllTrails, and booking pages."
+  },
+  "bases": [
+    {
+      "id": "ortisei",
+      "label": "Ortisei"
+    },
+    {
+      "id": "cortina",
+      "label": "Cortina"
+    }
+  ],
+  "hotels": {
+    "ortisei": {
+      "label": "Ortisei hotel",
+      "defaultHotelId": "gardena_grodnerhof",
+      "presetHotels": [
+        {
+          "id": "gardena_grodnerhof",
+          "name": "Gardena Grödnerhof",
+          "mapQuery": "Gardena Grodnerhof Ortisei",
+          "mapLink": "https://www.google.com/maps/search/?api=1&query=Gardena+Grodnerhof+Ortisei"
+        },
+        {
+          "id": "montchalet",
+          "name": "Montchalet",
+          "mapQuery": "Hotel Montchalet Ortisei",
+          "mapLink": "https://www.google.com/maps/search/?api=1&query=Hotel+Montchalet+Ortisei"
+        }
+      ]
+    },
+    "cortina": {
+      "label": "Cortina hotel",
+      "defaultHotelId": "hotel_de_len",
+      "presetHotels": [
+        {
+          "id": "hotel_de_len",
+          "name": "HOTEL de LEN",
+          "mapQuery": "HOTEL de LEN Cortina d'Ampezzo",
+          "mapLink": "https://www.google.com/maps/search/?api=1&query=HOTEL+de+LEN+Cortina+d%27Ampezzo"
+        },
+        {
+          "id": "rosapetra",
+          "name": "Rosapetra Spa Resort",
+          "mapQuery": "Rosapetra Spa Resort Cortina d'Ampezzo",
+          "mapLink": "https://www.google.com/maps/search/?api=1&query=Rosapetra+Spa+Resort+Cortina+d%27Ampezzo"
+        }
+      ]
+    }
+  },
+  "places": {
+    "lake_garda": {
+      "name": "Lake Garda",
+      "mapQuery": "Lake Garda Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Lake+Garda+Italy"
+    },
+    "venice": {
+      "name": "Venice",
+      "mapQuery": "Venice Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Venice+Italy"
+    },
+    "ortisei_town": {
+      "name": "Ortisei",
+      "mapQuery": "Ortisei Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Ortisei+Italy"
+    },
+    "cortina_town": {
+      "name": "Cortina d'Ampezzo",
+      "mapQuery": "Cortina d'Ampezzo",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Cortina+d%27Ampezzo"
+    },
+    "col_raiser": {
+      "name": "Col Raiser valley station",
+      "mapQuery": "Col Raiser Val Gardena",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Col+Raiser+Val+Gardena"
+    },
+    "zans_parking": {
+      "name": "Zans Parking",
+      "mapQuery": "Zans Parking Villnoss",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Zans+Parking+Villnoss"
+    },
+    "santa_maddalena_village": {
+      "name": "Santa Maddalena village parking area",
+      "mapQuery": "Santa Maddalena Funes Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Santa+Maddalena+Funes+Italy"
+    },
+    "puez_geisler_visitor_center": {
+      "name": "Puez-Geisler Nature Park Visitor Center",
+      "mapQuery": "Puez-Geisler Nature Park Visitor Center Santa Maddalena",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Puez-Geisler+Nature+Park+Visitor+Center+Santa+Maddalena"
+    },
+    "ortisei_alpe_gondola": {
+      "name": "Ortisei–Alpe di Siusi gondola",
+      "mapQuery": "Ortisei Alpe di Siusi Gondola",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Ortisei+Alpe+di+Siusi+Gondola"
+    },
+    "p1_spitzbuhl": {
+      "name": "P1 Spitzbühl",
+      "mapQuery": "Parking P1 Spitzbuhl Alpe di Siusi",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Parking+P1+Spitzbuhl+Alpe+di+Siusi"
+    },
+    "p2_compatsch": {
+      "name": "P2 Compatsch",
+      "mapQuery": "Parking P2 Compatsch",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Parking+P2+Compatsch"
+    },
+    "seis_cableway": {
+      "name": "Seis-Seiser Alm cableway valley station",
+      "mapQuery": "Seis Seiser Alm Aerial Cableway",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Seis+Seiser+Alm+Aerial+Cableway"
+    },
+    "bai_de_dones": {
+      "name": "Bai de Dones",
+      "mapQuery": "Bai de Dones",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Bai+de+Dones"
+    },
+    "auronzo_parking": {
+      "name": "Rifugio Auronzo Parking",
+      "mapQuery": "Rifugio Auronzo Parking",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Rifugio+Auronzo+Parking"
+    },
+    "passo_tre_croci": {
+      "name": "Passo Tre Croci",
+      "mapQuery": "Passo Tre Croci",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Passo+Tre+Croci"
+    },
+    "passo_sella": {
+      "name": "Passo Sella",
+      "mapQuery": "Passo Sella Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Passo+Sella+Italy"
+    },
+    "canazei": {
+      "name": "Canazei",
+      "mapQuery": "Canazei Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Canazei+Italy"
+    },
+    "passo_pordoi": {
+      "name": "Passo Pordoi",
+      "mapQuery": "Passo Pordoi Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Passo+Pordoi+Italy"
+    },
+    "arabba": {
+      "name": "Arabba",
+      "mapQuery": "Arabba Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Arabba+Italy"
+    },
+    "passo_gardena": {
+      "name": "Passo Gardena",
+      "mapQuery": "Passo Gardena Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Passo+Gardena+Italy"
+    },
+    "san_pietro_funes": {
+      "name": "San Pietro",
+      "mapQuery": "San Pietro Funes Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=San+Pietro+Funes+Italy"
+    },
+    "ranui": {
+      "name": "Ranui",
+      "mapQuery": "Ranui Funes Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Ranui+Funes+Italy"
+    },
+    "passo_falzarego": {
+      "name": "Passo Falzarego",
+      "mapQuery": "Passo Falzarego Italy",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Passo+Falzarego+Italy"
+    },
+    "passo_giau": {
+      "name": "Passo Giau",
+      "mapQuery": "Passo Giau",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Passo+Giau"
+    },
+    "lago_misurina": {
+      "name": "Lago di Misurina",
+      "mapQuery": "Lago di Misurina",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Lago+di+Misurina"
+    },
+    "rifugio_firenze": {
+      "name": "Rifugio Firenze",
+      "mapQuery": "Rifugio Firenze Val Gardena",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Rifugio+Firenze+Val+Gardena"
+    },
+    "geisler_alm": {
+      "name": "Geisler Alm",
+      "mapQuery": "Geisler Alm Villnoss",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Geisler+Alm+Villnoss"
+    },
+    "compatsch": {
+      "name": "Compatsch",
+      "mapQuery": "Compatsch Alpe di Siusi",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Compatsch+Alpe+di+Siusi"
+    },
+    "cinque_torri": {
+      "name": "Cinque Torri",
+      "mapQuery": "Cinque Torri",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Cinque+Torri"
+    },
+    "rifugio_averau": {
+      "name": "Rifugio Averau",
+      "mapQuery": "Rifugio Averau",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Rifugio+Averau"
+    },
+    "rifugio_nuvolau": {
+      "name": "Rifugio Nuvolau",
+      "mapQuery": "Rifugio Nuvolau",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Rifugio+Nuvolau"
+    },
+    "tre_cime": {
+      "name": "Tre Cime di Lavaredo",
+      "mapQuery": "Tre Cime di Lavaredo",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Tre+Cime+di+Lavaredo"
+    },
+    "cadini_viewpoint": {
+      "name": "Cadini viewpoint",
+      "mapQuery": "Cadini di Misurina viewpoint",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Cadini+di+Misurina+viewpoint"
+    },
+    "lago_sorapis": {
+      "name": "Lago di Sorapis",
+      "mapQuery": "Lago di Sorapis",
+      "mapLink": "https://www.google.com/maps/search/?api=1&query=Lago+di+Sorapis"
+    }
+  },
+  "hikes": {
+    "seceda_primary": {
+      "id": "seceda_primary",
+      "name": "Col Raiser – Seceda – Pieralongia – Rifugio Firenze",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/south-tyrol/col-raiser-seceda-pieralongia-rifugio-firenze",
+      "bestBase": "ortisei",
+      "difficulty": "Moderate",
+      "duration": "4.5–5 hr",
+      "gain": "2,086 ft",
+      "crowd": "Very high",
+      "tags": [
+        "green_meadows",
+        "dramatic_white_rock",
+        "hero_day",
+        "huts"
+      ],
+      "weather": [
+        "bluebird",
+        "partly_cloudy",
+        "high_clouds_dry"
+      ],
+      "energy": [
+        "high",
+        "medium"
+      ],
+      "commitment": "day_of_ok",
+      "reason": "Best blend of jagged ridgeline, green pasture, and huts without too much dead time.",
+      "access": "Drive to Col Raiser. Lift strongly recommended. Avoid Forcella Pana-centered plans.",
+      "cost": "Col Raiser round trip €32",
+      "booking": "Day-of is usually fine; arrive for first wave."
+    },
+    "seceda_secondary": {
+      "id": "seceda_secondary",
+      "name": "Seceda – Rifugio Firenze – Col Raiser – Mastlè",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/south-tyrol/seceda-rifugio-firenze-col-raiser-mastle",
+      "bestBase": "ortisei",
+      "difficulty": "Moderate",
+      "duration": "4–4.5 hr",
+      "gain": "1,998 ft",
+      "crowd": "Very high",
+      "tags": [
+        "green_meadows",
+        "dramatic_white_rock",
+        "backup"
+      ],
+      "weather": [
+        "bluebird",
+        "partly_cloudy",
+        "high_clouds_dry"
+      ],
+      "energy": [
+        "medium",
+        "high"
+      ],
+      "commitment": "day_of_ok",
+      "reason": "Slightly more compact Seceda variant with similar payoff.",
+      "access": "Same Col Raiser access as the primary plan.",
+      "cost": "Col Raiser round trip €32",
+      "booking": "Buy on site."
+    },
+    "adolf_munkel_primary": {
+      "id": "adolf_munkel_primary",
+      "name": "Adolf Munkel Trail",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/south-tyrol/via-delle-odle-zanser-alm-rifugio-delle-odle-malga-dusler",
+      "bestBase": "ortisei",
+      "difficulty": "Moderate",
+      "duration": "~5 hr",
+      "gain": "Popular trail",
+      "crowd": "High",
+      "tags": [
+        "green_meadows",
+        "huts",
+        "postcard",
+        "backup",
+        "mixed_weather_ok"
+      ],
+      "weather": [
+        "bluebird",
+        "partly_cloudy",
+        "high_clouds_dry",
+        "mixed_weather"
+      ],
+      "energy": [
+        "medium",
+        "high"
+      ],
+      "commitment": "reserve_if_possible",
+      "reason": "One of the best meadow + hut + Odle backdrop hikes in the Dolomites.",
+      "access": "Drive to Zans and watch the Ranui signal / reservation system.",
+      "cost": "Parking fee on site if applicable",
+      "booking": "Reserve if possible; otherwise go early."
+    },
+    "adolf_munkel_short": {
+      "id": "adolf_munkel_short",
+      "name": "Rifugio delle Odle via Sentiero Adolf Munkel",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/south-tyrol/rifugio-zannes-rifugio-delle-odle-via-sentiero-adolf-munkel",
+      "bestBase": "ortisei",
+      "difficulty": "Moderate",
+      "duration": "3 h 7 min",
+      "gain": "Moderate",
+      "crowd": "High",
+      "tags": [
+        "green_meadows",
+        "huts",
+        "backup",
+        "mixed_weather_ok",
+        "lower_effort"
+      ],
+      "weather": [
+        "partly_cloudy",
+        "high_clouds_dry",
+        "mixed_weather"
+      ],
+      "energy": [
+        "low",
+        "medium"
+      ],
+      "commitment": "reserve_if_possible",
+      "reason": "Shorter Odle-hut payoff and one of the best practical backups from Ortisei.",
+      "access": "Same Zans access as the classic Adolf Munkel day.",
+      "cost": "Parking fee on site if applicable",
+      "booking": "Reserve if possible."
+    },
+    "santa_maddalena_panoramic": {
+      "id": "santa_maddalena_panoramic",
+      "name": "Santa Maddalena: Panoramic Path",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/south-tyrol/santa-maddalena-sentiero-panoramico",
+      "bestBase": "ortisei",
+      "difficulty": "Moderate",
+      "duration": "3.5–4 hr",
+      "gain": "Scenic loop",
+      "crowd": "High near photo spots",
+      "tags": [
+        "church_postcard",
+        "green_meadows",
+        "mixed_weather_ok",
+        "backup"
+      ],
+      "weather": [
+        "bluebird",
+        "partly_cloudy",
+        "high_clouds_dry",
+        "mixed_weather"
+      ],
+      "energy": [
+        "low",
+        "medium"
+      ],
+      "commitment": "easy_day_of",
+      "reason": "Best church / meadow / village composition for your taste.",
+      "access": "Use village / visitor-center parking and follow local access signs.",
+      "cost": "Village parking fee locally controlled",
+      "booking": "No lift; flexible day-of."
+    },
+    "santa_maddalena_viewpoint": {
+      "id": "santa_maddalena_viewpoint",
+      "name": "Viewpoint Santa Maddalena",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/south-tyrol/punto-panoramico-santa-maddalena",
+      "bestBase": "ortisei",
+      "difficulty": "Easy",
+      "duration": "1.5–2 hr",
+      "gain": "Short scenic walk",
+      "crowd": "High near photo spots",
+      "tags": [
+        "church_postcard",
+        "lower_effort",
+        "mixed_weather_ok",
+        "arrival_day"
+      ],
+      "weather": [
+        "partly_cloudy",
+        "high_clouds_dry",
+        "mixed_weather",
+        "bad_weather"
+      ],
+      "energy": [
+        "low"
+      ],
+      "commitment": "easy_day_of",
+      "reason": "Best short photo-stop version if you want minimal effort.",
+      "access": "Same village/designated parking situation as the panoramic path.",
+      "cost": "Village parking fee locally controlled",
+      "booking": "No lift; flexible."
+    },
+    "hans_paula_primary": {
+      "id": "hans_paula_primary",
+      "name": "Hans & Paula Steger Trail",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/south-tyrol/sentiero-hans-e-paula-steger",
+      "bestBase": "ortisei",
+      "difficulty": "Moderate-easy",
+      "duration": "2.5–3 hr",
+      "gain": "764 ft",
+      "crowd": "High",
+      "tags": [
+        "green_meadows",
+        "lower_effort",
+        "huts",
+        "mixed_weather_ok"
+      ],
+      "weather": [
+        "bluebird",
+        "partly_cloudy",
+        "high_clouds_dry",
+        "mixed_weather"
+      ],
+      "energy": [
+        "low",
+        "medium"
+      ],
+      "commitment": "day_of_ok",
+      "reason": "Best low-effort rolling green meadow day with Sassolungo backdrop.",
+      "access": "Use Ortisei–Alpe di Siusi gondola or drive early before road restrictions.",
+      "cost": "Ortisei–Alpe di Siusi gondola €35 round trip",
+      "booking": "Day-of usually fine."
+    },
+    "bullaccia_secondary": {
+      "id": "bullaccia_secondary",
+      "name": "Bullaccia Tour: Witches’ Benches",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/south-tyrol/anello-della-bullaccia-panche-delle-streghe-hexenbanke",
+      "bestBase": "ortisei",
+      "difficulty": "Moderate",
+      "duration": "3–3.5 hr",
+      "gain": "1,177 ft",
+      "crowd": "High",
+      "tags": [
+        "green_meadows",
+        "backup",
+        "viewpoint"
+      ],
+      "weather": [
+        "bluebird",
+        "partly_cloudy",
+        "high_clouds_dry"
+      ],
+      "energy": [
+        "medium"
+      ],
+      "commitment": "day_of_ok",
+      "reason": "Best Alpe di Siusi alternate if you want more viewpoint emphasis.",
+      "access": "Same Seiser Alm access rules as the primary Alpe day.",
+      "cost": "Lift or parking fees apply",
+      "booking": "Day-of usually fine."
+    },
+    "cinque_torri_primary": {
+      "id": "cinque_torri_primary",
+      "name": "Cinque Torri – Averau | Nuvolau Refuge",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/veneto/cinque-torri-rifugio-averau-nuvolau",
+      "bestBase": "cortina",
+      "difficulty": "Moderate",
+      "duration": "3.5–5 hr",
+      "gain": "Moderate",
+      "crowd": "High",
+      "tags": [
+        "dramatic_white_rock",
+        "huts",
+        "transfer_day"
+      ],
+      "weather": [
+        "bluebird",
+        "partly_cloudy",
+        "high_clouds_dry"
+      ],
+      "energy": [
+        "medium",
+        "high"
+      ],
+      "commitment": "easy_day_of",
+      "reason": "Strong scenery-per-hour with broader ridge panoramas than the tiny towers-only loop.",
+      "access": "Park at Bai de Dones; chairlift optional.",
+      "cost": "Optional chairlift fee on site",
+      "booking": "Day-of is fine."
+    },
+    "tre_cime_primary": {
+      "id": "tre_cime_primary",
+      "name": "Three Peaks of Lavaredo",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/veneto/tre-cime-di-lavaredo-drei-zinnen",
+      "bestBase": "cortina",
+      "difficulty": "Moderate",
+      "duration": "3.5–4 hr",
+      "gain": "1,617 ft",
+      "crowd": "Very high",
+      "tags": [
+        "dramatic_white_rock",
+        "hero_day",
+        "must_clear_day"
+      ],
+      "weather": [
+        "bluebird",
+        "partly_cloudy"
+      ],
+      "energy": [
+        "medium",
+        "high"
+      ],
+      "commitment": "must_reserve",
+      "reason": "Best iconic white-rock payoff per hour and the most recognizable East Dolomites hike.",
+      "access": "Drive to Rifugio Auronzo with mandatory reservation.",
+      "cost": "Auronzo road + parking €40 per car",
+      "booking": "Must reserve in advance."
+    },
+    "cadini_primary": {
+      "id": "cadini_primary",
+      "name": "Cadini di Misurina Panoramic Viewpoint via Auronzo Hut",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/veneto/rifugio-auronzo-cadini-di-misurina",
+      "bestBase": "cortina",
+      "difficulty": "Moderate short hike",
+      "duration": "1.5–2 hr",
+      "gain": "Short",
+      "crowd": "Very high",
+      "tags": [
+        "dramatic_white_rock",
+        "hero_day",
+        "must_clear_day",
+        "short"
+      ],
+      "weather": [
+        "bluebird",
+        "partly_cloudy"
+      ],
+      "energy": [
+        "medium",
+        "high"
+      ],
+      "commitment": "must_reserve",
+      "reason": "Massive reward for little time and best paired with the same Auronzo reservation day.",
+      "access": "Same Auronzo access as Tre Cime.",
+      "cost": "Included in same €40 Auronzo road day",
+      "booking": "Use same Auronzo reservation."
+    },
+    "sorapis_primary": {
+      "id": "sorapis_primary",
+      "name": "Lake Sorapis via Passo Tre Croci",
+      "allTrailsUrl": "https://www.alltrails.com/trail/italy/veneto/passo-tre-croci-lago-sorapis",
+      "bestBase": "cortina",
+      "difficulty": "Challenging",
+      "duration": "4.5–5.5 hr",
+      "gain": "Popular lake route",
+      "crowd": "Very high",
+      "tags": [
+        "lake",
+        "dramatic_white_rock",
+        "hero_day"
+      ],
+      "weather": [
+        "bluebird",
+        "partly_cloudy",
+        "high_clouds_dry"
+      ],
+      "energy": [
+        "high",
+        "medium"
+      ],
+      "commitment": "easy_day_of",
+      "reason": "Best turquoise-lake option that still fits your realistic time ceiling.",
+      "access": "Drive to Passo Tre Croci and go early for parking.",
+      "cost": "Standard roadside / pass-area parking",
+      "booking": "No formal booking."
+    }
+  },
+  "drives": {
+    "sellaronda_drive": {
+      "id": "sellaronda_drive",
+      "name": "Sellaronda Scenic Loop",
+      "bestBase": "ortisei",
+      "summary": "Best West-side bad-weather backup with dramatic pass scenery and minimal dead time.",
+      "weather": [
+        "mixed_weather",
+        "bad_weather",
+        "storm_risk"
+      ],
+      "energy": [
+        "low",
+        "medium"
+      ],
+      "commitment": "easy_day_of",
+      "tags": [
+        "scenic_drive_only",
+        "dramatic_white_rock"
+      ],
+      "route": {
+        "originMode": "hotel_dynamic",
+        "base": "ortisei",
+        "waypoints": [
+          "passo_sella",
+          "canazei",
+          "passo_pordoi",
+          "arabba",
+          "passo_gardena"
+        ],
+        "returnToOrigin": true
+      },
+      "keyStops": [
+        "passo_sella",
+        "passo_pordoi",
+        "passo_gardena"
+      ]
+    },
+    "val_di_funes_drive": {
+      "id": "val_di_funes_drive",
+      "name": "Val di Funes Scenic Drive",
+      "bestBase": "ortisei",
+      "summary": "Best lower-valley backup for church views, meadows, and villages when summits are clouded in.",
+      "weather": [
+        "mixed_weather",
+        "bad_weather",
+        "storm_risk"
+      ],
+      "energy": [
+        "low",
+        "medium"
+      ],
+      "commitment": "easy_day_of",
+      "tags": [
+        "scenic_drive_only",
+        "church_postcard",
+        "green_meadows"
+      ],
+      "route": {
+        "originMode": "hotel_dynamic",
+        "base": "ortisei",
+        "waypoints": [
+          "san_pietro_funes",
+          "santa_maddalena_village",
+          "ranui"
+        ],
+        "returnToOrigin": true
+      },
+      "keyStops": [
+        "san_pietro_funes",
+        "santa_maddalena_village",
+        "ranui"
+      ]
+    },
+    "great_dolomite_transfer": {
+      "id": "great_dolomite_transfer",
+      "name": "Great Dolomite Road transfer",
+      "bestBase": "both",
+      "summary": "Best scenic hotel-transfer route between Ortisei and Cortina.",
+      "weather": [
+        "bluebird",
+        "partly_cloudy",
+        "high_clouds_dry",
+        "mixed_weather"
+      ],
+      "energy": [
+        "medium"
+      ],
+      "commitment": "easy_day_of",
+      "tags": [
+        "scenic_drive_only",
+        "transfer_day",
+        "dramatic_white_rock"
+      ],
+      "route": {
+        "originMode": "hotel_dynamic",
+        "base": "ortisei",
+        "destinationMode": "hotel_dynamic",
+        "destinationBase": "cortina",
+        "waypoints": [
+          "passo_sella",
+          "passo_pordoi",
+          "passo_falzarego"
+        ]
+      },
+      "keyStops": [
+        "passo_sella",
+        "passo_pordoi",
+        "passo_falzarego"
+      ]
+    },
+    "east_bad_weather_loop": {
+      "id": "east_bad_weather_loop",
+      "name": "Passo Giau + Falzarego + Misurina loop",
+      "bestBase": "cortina",
+      "summary": "Best East-side backup when full hikes are not worth it.",
+      "weather": [
+        "mixed_weather",
+        "bad_weather",
+        "storm_risk"
+      ],
+      "energy": [
+        "low",
+        "medium"
+      ],
+      "commitment": "easy_day_of",
+      "tags": [
+        "scenic_drive_only",
+        "dramatic_white_rock",
+        "lake"
+      ],
+      "route": {
+        "originMode": "hotel_dynamic",
+        "base": "cortina",
+        "waypoints": [
+          "passo_giau",
+          "passo_falzarego",
+          "lago_misurina"
+        ],
+        "returnToOrigin": true
+      },
+      "keyStops": [
+        "passo_giau",
+        "passo_falzarego",
+        "lago_misurina"
+      ]
+    }
+  },
+  "parkingTable": [
+    {
+      "name": "Col Raiser valley station",
+      "serves": "Seceda primary / secondary routes",
+      "mapPlaceId": "col_raiser",
+      "rules": "Lift from 8:30. Buy on site.",
+      "cost": "€32 round trip"
+    },
+    {
+      "name": "Zans Parking",
+      "serves": "Adolf Munkel routes",
+      "mapPlaceId": "zans_parking",
+      "rules": "2026 uses Ranui signal-light system and some pre-bookable spaces.",
+      "cost": "On-site / reservation fee varies"
+    },
+    {
+      "name": "Santa Maddalena village / visitor-center area",
+      "serves": "Santa Maddalena hikes",
+      "mapPlaceId": "santa_maddalena_village",
+      "rules": "Use designated village parking and follow local signs; exact official English lot naming is not clear.",
+      "cost": "Local village fee"
+    },
+    {
+      "name": "Ortisei–Alpe di Siusi gondola valley station",
+      "serves": "Hans & Paula Steger primary access",
+      "mapPlaceId": "ortisei_alpe_gondola",
+      "rules": "Simplest access from Ortisei.",
+      "cost": "€35 round trip"
+    },
+    {
+      "name": "P1 Spitzbühl",
+      "serves": "Direct-drive Alpe di Siusi option",
+      "mapPlaceId": "p1_spitzbuhl",
+      "rules": "Road restricted 9:00–17:00; can close earlier when full.",
+      "cost": "€15/day"
+    },
+    {
+      "name": "P2 Compatsch",
+      "serves": "Direct-drive Alpe di Siusi option",
+      "mapPlaceId": "p2_compatsch",
+      "rules": "Road restricted 9:00–17:00; machine payment before exit.",
+      "cost": "€30/day"
+    },
+    {
+      "name": "Bai de Dones",
+      "serves": "Cinque Torri",
+      "mapPlaceId": "bai_de_dones",
+      "rules": "Chairlift optional; current summer first runs around 9:00.",
+      "cost": "Optional chairlift on site"
+    },
+    {
+      "name": "Rifugio Auronzo Parking",
+      "serves": "Tre Cime + Cadini",
+      "mapPlaceId": "auronzo_parking",
+      "rules": "Mandatory online reservation; permit valid 12 hours.",
+      "cost": "€40/car"
+    },
+    {
+      "name": "Passo Tre Croci area",
+      "serves": "Lago di Sorapis",
+      "mapPlaceId": "passo_tre_croci",
+      "rules": "No lift. Arrive early for parking.",
+      "cost": "Standard roadside / pass-area parking"
+    }
+  ],
+  "bookings": [
+    {
+      "category": "Book now",
+      "item": "Tre Cime / Auronzo road access",
+      "note": "Mandatory for Day 6; reserve when date opens.",
+      "link": "https://auronzo.info/en/parking-tre-cime-di-lavaredo/"
+    },
+    {
+      "category": "Check closer to trip",
+      "item": "Zans parking / Ranui signal system",
+      "note": "Review the current reservation/access rules before Day 3.",
+      "link": "https://wildconnectionsphotography.com/new-2026-access-restrictions-in-the-dolomites/"
+    },
+    {
+      "category": "Can do day-of",
+      "item": "Col Raiser lift",
+      "note": "Day-of purchase usually fine if you arrive early.",
+      "link": "https://www.colraiser.it/en/"
+    },
+    {
+      "category": "Can do day-of",
+      "item": "Ortisei–Alpe di Siusi gondola",
+      "note": "Day-of purchase usually fine.",
+      "link": "https://www.seiseralm.it/en/active/summer-holidays/hiking/cable-cars.html"
+    }
+  ],
+  "planCards": {
+    "d1_arrival_santa_short": {
+      "id": "d1_arrival_santa_short",
+      "type": "hike",
+      "base": "ortisei",
+      "title": "Optional short Santa Maddalena stop",
+      "linkedHikes": [
+        "santa_maddalena_viewpoint"
+      ],
+      "summary": "Low-commitment arrival-day photo walk if weather is nice and energy is decent.",
+      "whenToUse": "Use on arrival day if you get in early enough and want a short scenic church/meadow stop.",
+      "timing": {
+        "depart": "15:30",
+        "arrive": "16:10",
+        "duration": "1.5–2 hr",
+        "return": "19:00"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Santa Maddalena village parking",
+          "originBase": "ortisei",
+          "destination": "santa_maddalena_village",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "No lift needed.",
+        "Use village/designated parking and follow local access signs."
+      ],
+      "costs": [
+        "Village parking fee locally controlled"
+      ],
+      "bookings": [
+        "No reservation needed."
+      ],
+      "mentalMap": "Quick church-view and meadow stop with low commitment."
+    },
+    "d1_arrival_town_reset": {
+      "id": "d1_arrival_town_reset",
+      "type": "town",
+      "base": "ortisei",
+      "title": "Ortisei town reset",
+      "linkedHikes": [],
+      "summary": "Skip hiking and recover from the drive in.",
+      "whenToUse": "Best if arrival is delayed or energy is low.",
+      "timing": {
+        "depart": "Flexible",
+        "arrive": "—",
+        "duration": "Easy evening",
+        "return": "—"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Ortisei center",
+          "originBase": "ortisei",
+          "destination": "ortisei_town",
+          "travelMode": "walking"
+        }
+      ],
+      "logistics": [
+        "No parking/logistics stress.",
+        "Good for settling in and preserving energy."
+      ],
+      "costs": [],
+      "bookings": [],
+      "mentalMap": "Simple arrival buffer."
+    },
+    "d1_val_di_funes_drive": {
+      "id": "d1_val_di_funes_drive",
+      "type": "scenic_drive",
+      "base": "ortisei",
+      "title": "Val di Funes scenic drive",
+      "linkedDrive": "val_di_funes_drive",
+      "summary": "Best mixed/bad-weather fallback from Ortisei on arrival.",
+      "whenToUse": "Use when peaks are clouded in but valley scenery is still visible.",
+      "timing": {
+        "depart": "15:30",
+        "arrive": "16:15",
+        "duration": "2.5–4 hr flexible",
+        "return": "19:30"
+      },
+      "accessRoutes": [],
+      "logistics": [
+        "Flexible scenic stops.",
+        "Easy to shorten if weather worsens."
+      ],
+      "costs": [],
+      "bookings": [],
+      "mentalMap": "Villages, church views, meadows, and easier visibility than high ridges."
+    },
+    "d2_seceda_primary": {
+      "id": "d2_seceda_primary",
+      "type": "hike",
+      "base": "ortisei",
+      "title": "Seceda hero day",
+      "linkedHikes": [
+        "seceda_primary"
+      ],
+      "summary": "Your best West-side ridge + meadow hero hike.",
+      "whenToUse": "Use on the clearest West-side day.",
+      "timing": {
+        "depart": "08:15",
+        "arrive": "08:25",
+        "duration": "9:00–14:00 on trail",
+        "return": "14:45"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Col Raiser valley station",
+          "originBase": "ortisei",
+          "destination": "col_raiser",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Park at Col Raiser.",
+        "Lift strongly recommended."
+      ],
+      "costs": [
+        "Col Raiser round trip €32"
+      ],
+      "bookings": [
+        "Arrive for the first wave; day-of purchase usually fine."
+      ],
+      "mentalMap": "Dramatic ridgeline above green pastures and huts."
+    },
+    "d2_adolf_short_alt": {
+      "id": "d2_adolf_short_alt",
+      "type": "hike",
+      "base": "ortisei",
+      "title": "Adolf Munkel shorter backup",
+      "linkedHikes": [
+        "adolf_munkel_short"
+      ],
+      "summary": "Lower-commitment alternate if Seceda feels too weather-sensitive or you want less exposure.",
+      "whenToUse": "Best if weather is mixed, visibility is decent in the valley, or you want a shorter/meadow-focused day.",
+      "timing": {
+        "depart": "08:15",
+        "arrive": "08:50",
+        "duration": "3–3.5 hr",
+        "return": "14:00"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Zans parking",
+          "originBase": "ortisei",
+          "destination": "zans_parking",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Use Zans access rules.",
+        "Shorter Odle payoff than the full classic route."
+      ],
+      "costs": [
+        "Parking fee if applicable"
+      ],
+      "bookings": [
+        "Reserve if possible; otherwise go early."
+      ],
+      "mentalMap": "Shorter meadow-and-hut Odle fallback."
+    },
+    "d2_sellaronda_bad": {
+      "id": "d2_sellaronda_bad",
+      "type": "scenic_drive",
+      "base": "ortisei",
+      "title": "Sellaronda scenic drive",
+      "linkedDrive": "sellaronda_drive",
+      "summary": "Best true bad-weather fallback from Ortisei with huge pass scenery.",
+      "whenToUse": "Use when high hiking terrain is not worth it.",
+      "timing": {
+        "depart": "09:00",
+        "arrive": "09:45",
+        "duration": "4–6 hr flexible",
+        "return": "16:00"
+      },
+      "accessRoutes": [],
+      "logistics": [
+        "Road-trip day with multiple pass pull-offs.",
+        "Easy to shorten or extend."
+      ],
+      "costs": [
+        "Standard fuel / road costs"
+      ],
+      "bookings": [],
+      "mentalMap": "Pass-driven wow-factor day instead of committing to a lift."
+    },
+    "d3_adolf_primary": {
+      "id": "d3_adolf_primary",
+      "type": "hike",
+      "base": "ortisei",
+      "title": "Adolf Munkel classic day",
+      "linkedHikes": [
+        "adolf_munkel_primary"
+      ],
+      "summary": "Best meadow + hut + Odle wall day of the trip.",
+      "whenToUse": "Use when you want one of the strongest beauty-per-effort meadow hikes.",
+      "timing": {
+        "depart": "08:15",
+        "arrive": "08:50",
+        "duration": "9:00–14:00",
+        "return": "15:00"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Zans parking",
+          "originBase": "ortisei",
+          "destination": "zans_parking",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Reserve if possible.",
+        "Watch the Ranui signal system."
+      ],
+      "costs": [
+        "Parking fee if applicable"
+      ],
+      "bookings": [
+        "Reserve/check access if possible."
+      ],
+      "mentalMap": "Open meadow trail with hut and toothy Odle backdrop."
+    },
+    "d3_santa_alt": {
+      "id": "d3_santa_alt",
+      "type": "hike",
+      "base": "ortisei",
+      "title": "Santa Maddalena alternate day",
+      "linkedHikes": [
+        "santa_maddalena_panoramic"
+      ],
+      "summary": "Lower-effort church/meadow day if you want something softer and more village-oriented.",
+      "whenToUse": "Best if you feel tired or want lower-commitment scenery.",
+      "timing": {
+        "depart": "08:30",
+        "arrive": "09:10",
+        "duration": "3.5–4 hr",
+        "return": "14:30"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Santa Maddalena village parking",
+          "originBase": "ortisei",
+          "destination": "santa_maddalena_village",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Use designated village/visitor-center style parking.",
+        "No lift needed."
+      ],
+      "costs": [
+        "Village parking fee locally controlled"
+      ],
+      "bookings": [
+        "No formal booking."
+      ],
+      "mentalMap": "Church, fields, farms, and postcard framing."
+    },
+    "d3_val_bad": {
+      "id": "d3_val_bad",
+      "type": "scenic_drive",
+      "base": "ortisei",
+      "title": "Val di Funes scenic drive",
+      "linkedDrive": "val_di_funes_drive",
+      "summary": "Best true poor-weather replacement for the Adolf Munkel day.",
+      "whenToUse": "Use when summit visibility is poor or rain/storm risk is too high.",
+      "timing": {
+        "depart": "09:00",
+        "arrive": "09:45",
+        "duration": "3–5 hr flexible",
+        "return": "15:00"
+      },
+      "accessRoutes": [],
+      "logistics": [
+        "Easy scenic day with photo stops.",
+        "Can pair with a very short Santa Maddalena walk."
+      ],
+      "costs": [],
+      "bookings": [],
+      "mentalMap": "Lower-valley scenic church/meadow day."
+    },
+    "d4_alpe_primary": {
+      "id": "d4_alpe_primary",
+      "type": "hike",
+      "base": "ortisei",
+      "title": "Alpe di Siusi postcard day",
+      "linkedHikes": [
+        "hans_paula_primary"
+      ],
+      "summary": "Best lower-effort rolling-green day on the plateau.",
+      "whenToUse": "Use when you want a visually strong but less demanding day.",
+      "timing": {
+        "depart": "08:00",
+        "arrive": "08:10",
+        "duration": "9:15–12:15",
+        "return": "14:30"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Ortisei–Alpe di Siusi gondola",
+          "originBase": "ortisei",
+          "destination": "ortisei_alpe_gondola",
+          "travelMode": "driving"
+        },
+        {
+          "label": "Hotel → P1 Spitzbühl",
+          "originBase": "ortisei",
+          "destination": "p1_spitzbuhl",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Best default is the Ortisei gondola.",
+        "If driving onto the plateau, go before road restriction time."
+      ],
+      "costs": [
+        "Ortisei–Alpe di Siusi gondola €35 round trip",
+        "P1 €15/day",
+        "P2 €30/day"
+      ],
+      "bookings": [
+        "Day-of usually fine."
+      ],
+      "mentalMap": "Open rolling alpine grass with big Sassolungo backdrop."
+    },
+    "d4_bullaccia_alt": {
+      "id": "d4_bullaccia_alt",
+      "type": "hike",
+      "base": "ortisei",
+      "title": "Bullaccia alternate plateau day",
+      "linkedHikes": [
+        "bullaccia_secondary"
+      ],
+      "summary": "Use this if you want more viewpoint emphasis than the flatter Hans & Paula route.",
+      "whenToUse": "Best if weather is decent and you want a slightly fuller plateau loop.",
+      "timing": {
+        "depart": "08:00",
+        "arrive": "08:10",
+        "duration": "3–3.5 hr",
+        "return": "14:30"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Ortisei–Alpe di Siusi gondola",
+          "originBase": "ortisei",
+          "destination": "ortisei_alpe_gondola",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Same access rules as the main Alpe day."
+      ],
+      "costs": [
+        "Same lift / parking costs as primary plateau access"
+      ],
+      "bookings": [
+        "Day-of usually fine."
+      ],
+      "mentalMap": "Slightly more viewpoint-forward version of the plateau day."
+    },
+    "d4_sellaronda_bad": {
+      "id": "d4_sellaronda_bad",
+      "type": "scenic_drive",
+      "base": "ortisei",
+      "title": "Sellaronda scenic drive",
+      "linkedDrive": "sellaronda_drive",
+      "summary": "Best full bad-weather backup for the plateau day.",
+      "whenToUse": "Use when lift/plateau weather is not worth committing to.",
+      "timing": {
+        "depart": "09:00",
+        "arrive": "09:45",
+        "duration": "4–6 hr flexible",
+        "return": "16:00"
+      },
+      "accessRoutes": [],
+      "logistics": [
+        "Pass loop with easy scenic pull-offs."
+      ],
+      "costs": [
+        "Standard road/fuel costs"
+      ],
+      "bookings": [],
+      "mentalMap": "Road-based pass scenery in place of the plateau."
+    },
+    "d5_transfer_cinque": {
+      "id": "d5_transfer_cinque",
+      "type": "hike",
+      "base": "both",
+      "title": "Scenic transfer + Cinque Torri",
+      "linkedHikes": [
+        "cinque_torri_primary"
+      ],
+      "summary": "Use the transfer day efficiently by turning it into a scenic pass drive plus a medium-effort hike.",
+      "whenToUse": "Best as the main hotel-transfer day from Ortisei to Cortina.",
+      "timing": {
+        "depart": "08:00",
+        "arrive": "10:30–11:00 at Bai de Dones",
+        "duration": "11:15–15:15",
+        "return": "16:00 at Cortina hotel"
+      },
+      "accessRoutes": [
+        {
+          "label": "Ortisei hotel → scenic transfer → Bai de Dones → Cortina hotel",
+          "transferBetweenBases": true,
+          "originBase": "ortisei",
+          "destinationBase": "cortina",
+          "waypoints": [
+            "passo_sella",
+            "passo_pordoi",
+            "passo_falzarego",
+            "bai_de_dones"
+          ],
+          "travelMode": "driving"
+        },
+        {
+          "label": "Bai de Dones → Cortina hotel",
+          "originPlace": "bai_de_dones",
+          "destinationBase": "cortina",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Park at Bai de Dones.",
+        "Optional chairlift if desired."
+      ],
+      "costs": [
+        "Optional chairlift fee"
+      ],
+      "bookings": [
+        "Day-of usually fine."
+      ],
+      "mentalMap": "No-wasted-transfer day through dramatic passes and rifugi."
+    },
+    "d5_transfer_drive_only": {
+      "id": "d5_transfer_drive_only",
+      "type": "scenic_drive",
+      "base": "both",
+      "title": "Great Dolomite Road transfer only",
+      "linkedDrive": "great_dolomite_transfer",
+      "summary": "Best if weather is not good enough to justify Cinque Torri hiking on the transfer day.",
+      "whenToUse": "Use when the drive itself will still be rewarding but the hike is not worth the effort.",
+      "timing": {
+        "depart": "08:30",
+        "arrive": "14:00–15:00 depending stops",
+        "duration": "Most of the day",
+        "return": "Arrive Cortina mid-afternoon"
+      },
+      "accessRoutes": [],
+      "logistics": [
+        "Use this as the default fallback if hiking conditions are poor."
+      ],
+      "costs": [
+        "Standard road/fuel costs"
+      ],
+      "bookings": [],
+      "mentalMap": "Scenic relocation day without forcing a hike."
+    },
+    "d6_trecime_primary": {
+      "id": "d6_trecime_primary",
+      "type": "hike",
+      "base": "cortina",
+      "title": "Tre Cime + Cadini hero day",
+      "linkedHikes": [
+        "tre_cime_primary",
+        "cadini_primary"
+      ],
+      "summary": "Biggest icon day of the trip, using one Auronzo booking efficiently.",
+      "whenToUse": "Use on the clearest East-side day.",
+      "timing": {
+        "depart": "07:00",
+        "arrive": "07:50",
+        "duration": "Tre Cime 8:00–12:00 + Cadini 12:15–13:30",
+        "return": "14:30"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Rifugio Auronzo Parking",
+          "originBase": "cortina",
+          "destination": "auronzo_parking",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Book Auronzo in advance.",
+        "Combine both hikes on the same road-access day."
+      ],
+      "costs": [
+        "Auronzo road + parking €40/car"
+      ],
+      "bookings": [
+        "Must reserve online."
+      ],
+      "mentalMap": "Hero white-rock day with the two most iconic Auronzo-zone payoffs."
+    },
+    "d6_cinque_alt": {
+      "id": "d6_cinque_alt",
+      "type": "hike",
+      "base": "cortina",
+      "title": "Cinque Torri alternate day",
+      "linkedHikes": [
+        "cinque_torri_primary"
+      ],
+      "summary": "Use if the Tre Cime day is not getting the sky it deserves.",
+      "whenToUse": "Best if East-side high icons are too clouded, but mid-elevation pass scenery still works.",
+      "timing": {
+        "depart": "08:30",
+        "arrive": "08:55",
+        "duration": "3.5–5 hr",
+        "return": "15:00"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Bai de Dones",
+          "originBase": "cortina",
+          "destination": "bai_de_dones",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Lower commitment and more forgiving than Auronzo."
+      ],
+      "costs": [
+        "Optional chairlift fee"
+      ],
+      "bookings": [
+        "Day-of usually fine."
+      ],
+      "mentalMap": "More flexible East-side rocky-rifugio day."
+    },
+    "d6_east_drive_bad": {
+      "id": "d6_east_drive_bad",
+      "type": "scenic_drive",
+      "base": "cortina",
+      "title": "Passo Giau + Falzarego + Misurina loop",
+      "linkedDrive": "east_bad_weather_loop",
+      "summary": "Best true bad-weather replacement for the Auronzo hero day.",
+      "whenToUse": "Use when cloud cover or storm risk makes the Auronzo reservation not worthwhile.",
+      "timing": {
+        "depart": "09:00",
+        "arrive": "09:30",
+        "duration": "4–6 hr flexible",
+        "return": "16:00"
+      },
+      "accessRoutes": [],
+      "logistics": [
+        "Good road-based East-side scenery with easy stops."
+      ],
+      "costs": [
+        "Standard road/fuel costs"
+      ],
+      "bookings": [],
+      "mentalMap": "Pass-and-lake alternative to a lost hero day."
+    },
+    "d7_sorapis_primary": {
+      "id": "d7_sorapis_primary",
+      "type": "hike",
+      "base": "cortina",
+      "title": "Lago di Sorapis day",
+      "linkedHikes": [
+        "sorapis_primary"
+      ],
+      "summary": "Best turquoise-lake day within your realistic time ceiling.",
+      "whenToUse": "Use when weather is decent and you still want one final substantial East-side hike.",
+      "timing": {
+        "depart": "07:30",
+        "arrive": "07:50",
+        "duration": "8:00–13:00",
+        "return": "14:00"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Passo Tre Croci",
+          "originBase": "cortina",
+          "destination": "passo_tre_croci",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Arrive early for parking.",
+        "No lift."
+      ],
+      "costs": [
+        "Standard roadside / pass-area parking"
+      ],
+      "bookings": [
+        "No formal booking."
+      ],
+      "mentalMap": "Turquoise-lake day with a more adventurous feel than the meadow hikes."
+    },
+    "d7_trecime_swap_alt": {
+      "id": "d7_trecime_swap_alt",
+      "type": "hike",
+      "base": "cortina",
+      "title": "Tre Cime + Cadini swap day",
+      "linkedHikes": [
+        "tre_cime_primary",
+        "cadini_primary"
+      ],
+      "summary": "Use this if Day 6 weather was poor and you saved the Auronzo reservation for today.",
+      "whenToUse": "Best if yesterday was clouded out but today is clear.",
+      "timing": {
+        "depart": "07:00",
+        "arrive": "07:50",
+        "duration": "Tre Cime 8:00–12:00 + Cadini 12:15–13:30",
+        "return": "14:30"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Rifugio Auronzo Parking",
+          "originBase": "cortina",
+          "destination": "auronzo_parking",
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Only practical if your Auronzo booking can align with this day."
+      ],
+      "costs": [
+        "Auronzo road + parking €40/car"
+      ],
+      "bookings": [
+        "Must have valid reservation."
+      ],
+      "mentalMap": "Weather-flex swap version of the hero day."
+    },
+    "d7_east_drive_bad": {
+      "id": "d7_east_drive_bad",
+      "type": "scenic_drive",
+      "base": "cortina",
+      "title": "Passo Giau + Falzarego + Misurina loop",
+      "linkedDrive": "east_bad_weather_loop",
+      "summary": "Best bad-weather East-side fallback on the final Dolomites day.",
+      "whenToUse": "Use when a full Sorapis hike is not worth it.",
+      "timing": {
+        "depart": "09:00",
+        "arrive": "09:30",
+        "duration": "4–6 hr flexible",
+        "return": "16:00"
+      },
+      "accessRoutes": [],
+      "logistics": [
+        "Flexible final-day road loop."
+      ],
+      "costs": [
+        "Standard road/fuel costs"
+      ],
+      "bookings": [],
+      "mentalMap": "Easy East-side scenic fallback."
+    },
+    "d8_venice_transfer": {
+      "id": "d8_venice_transfer",
+      "type": "transfer",
+      "base": "cortina",
+      "title": "Cortina → Venice transfer",
+      "linkedHikes": [],
+      "summary": "Simple exit day with optional Misurina stop if weather is beautiful.",
+      "whenToUse": "Use on departure day.",
+      "timing": {
+        "depart": "Flexible",
+        "arrive": "Varies",
+        "duration": "Transfer",
+        "return": "—"
+      },
+      "accessRoutes": [
+        {
+          "label": "Hotel → Venice",
+          "originBase": "cortina",
+          "destination": "venice",
+          "travelMode": "driving"
+        },
+        {
+          "label": "Hotel → Lago di Misurina → Venice",
+          "originBase": "cortina",
+          "destination": "venice",
+          "waypoints": [
+            "lago_misurina"
+          ],
+          "travelMode": "driving"
+        }
+      ],
+      "logistics": [
+        "Optional short lake stop if skies are beautiful."
+      ],
+      "costs": [
+        "Regular road costs"
+      ],
+      "bookings": [],
+      "mentalMap": "Clean exit with optional final scenic pause."
+    }
+  },
+  "days": [
+    {
+      "id": "day1",
+      "label": "Day 1",
+      "base": "ortisei",
+      "sleepBase": "ortisei",
+      "primaryPlanIds": [
+        "d1_arrival_santa_short"
+      ],
+      "alternatePlanIds": [
+        "d1_arrival_town_reset"
+      ],
+      "badWeatherPlanIds": [
+        "d1_val_di_funes_drive"
+      ],
+      "summary": "Arrival + optional short Santa Maddalena stop"
+    },
+    {
+      "id": "day2",
+      "label": "Day 2",
+      "base": "ortisei",
+      "sleepBase": "ortisei",
+      "primaryPlanIds": [
+        "d2_seceda_primary"
+      ],
+      "alternatePlanIds": [
+        "d2_adolf_short_alt"
+      ],
+      "badWeatherPlanIds": [
+        "d2_sellaronda_bad",
+        "d2_adolf_short_alt"
+      ],
+      "summary": "Seceda hero day"
+    },
+    {
+      "id": "day3",
+      "label": "Day 3",
+      "base": "ortisei",
+      "sleepBase": "ortisei",
+      "primaryPlanIds": [
+        "d3_adolf_primary"
+      ],
+      "alternatePlanIds": [
+        "d3_santa_alt"
+      ],
+      "badWeatherPlanIds": [
+        "d3_val_bad",
+        "d3_santa_alt"
+      ],
+      "summary": "Adolf Munkel classic day"
+    },
+    {
+      "id": "day4",
+      "label": "Day 4",
+      "base": "ortisei",
+      "sleepBase": "ortisei",
+      "primaryPlanIds": [
+        "d4_alpe_primary"
+      ],
+      "alternatePlanIds": [
+        "d4_bullaccia_alt"
+      ],
+      "badWeatherPlanIds": [
+        "d4_sellaronda_bad"
+      ],
+      "summary": "Alpe di Siusi postcard day"
+    },
+    {
+      "id": "day5",
+      "label": "Day 5",
+      "base": "both",
+      "sleepBase": "cortina",
+      "primaryPlanIds": [
+        "d5_transfer_cinque"
+      ],
+      "alternatePlanIds": [],
+      "badWeatherPlanIds": [
+        "d5_transfer_drive_only"
+      ],
+      "summary": "Ortisei → Cortina scenic transfer + Cinque Torri"
+    },
+    {
+      "id": "day6",
+      "label": "Day 6",
+      "base": "cortina",
+      "sleepBase": "cortina",
+      "primaryPlanIds": [
+        "d6_trecime_primary"
+      ],
+      "alternatePlanIds": [
+        "d6_cinque_alt"
+      ],
+      "badWeatherPlanIds": [
+        "d6_east_drive_bad"
+      ],
+      "summary": "Tre Cime + Cadini hero day"
+    },
+    {
+      "id": "day7",
+      "label": "Day 7",
+      "base": "cortina",
+      "sleepBase": "cortina",
+      "primaryPlanIds": [
+        "d7_sorapis_primary"
+      ],
+      "alternatePlanIds": [
+        "d7_trecime_swap_alt"
+      ],
+      "badWeatherPlanIds": [
+        "d7_east_drive_bad"
+      ],
+      "summary": "Lago di Sorapis day"
+    }
+  ]
+}
