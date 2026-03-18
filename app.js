@@ -189,6 +189,35 @@ function metricCard(title, contentHtml) {
   return el('div', 'metric-card', `<h3>${escapeHtml(title)}</h3><div class="muted">${contentHtml}</div>`);
 }
 
+function regionLabelFromBase(base) {
+  if (base === "ortisei") return "West";
+  if (base === "cortina") return "East";
+  return "Transfer / mixed";
+}
+
+function regionForOverviewGroup(group) {
+  const name = String(group?.group || '').toLowerCase();
+  if (name.includes('west')) return 'West';
+  if (name.includes('east')) return 'East';
+  const first = group?.items?.[0];
+  if (first?.type === 'hike') return regionLabelFromBase(data.hikes?.[first.id]?.bestBase);
+  if (first?.type === 'drive') {
+    const bestBase = data.drives?.[first.id]?.bestBase;
+    return bestBase === 'both' ? 'Transfer / mixed' : regionLabelFromBase(bestBase);
+  }
+  return 'Transfer / mixed';
+}
+
+function nestOverviewGroups(groups=[]) {
+  const regionOrder = ['West', 'East', 'Transfer / mixed'];
+  const map = {};
+  groups.forEach(group => {
+    const region = regionForOverviewGroup(group);
+    (map[region] ||= []).push(group);
+  });
+  return regionOrder.filter(r => map[r]?.length).map(region => ({ region, groups: map[region] }));
+}
+
 function renderOverviewItem(item) {
   let href = '';
   if (item.type === 'hike') href = data.hikes?.[item.id]?.allTrailsUrl || '';
@@ -196,11 +225,18 @@ function renderOverviewItem(item) {
   return href ? `<a class="overview-link-pill" href="${href}" target="_blank" rel="noopener">${escapeHtml(item.label)}</a>` : `<span class="badge">${escapeHtml(item.label)}</span>`;
 }
 function renderOverviewGroups(groups=[]) {
-  return groups.map(group => `
-    <div class="overview-group">
-      <div class="overview-group-title">${escapeHtml(group.group)}</div>
-      <div class="overview-link-list">${(group.items||[]).map(renderOverviewItem).join('')}</div>
-    </div>
+  return nestOverviewGroups(groups).map(regionBlock => `
+    <section class="overview-region-block">
+      <div class="overview-region-title">${escapeHtml(regionBlock.region)}</div>
+      <div class="overview-area-stack">
+        ${regionBlock.groups.map(group => `
+          <div class="overview-group compact">
+            <div class="overview-group-title">${escapeHtml(group.group)}</div>
+            <div class="overview-link-list compact">${(group.items||[]).map(renderOverviewItem).join('')}</div>
+          </div>
+        `).join('')}
+      </div>
+    </section>
   `).join('');
 }
 
@@ -615,7 +651,7 @@ function renderHikeCard(hike) {
 }
 
 function renderHikeLibrary() {
-  const section = sectionShell('hike-library', 'Hike Library', 'Complete reference library grouped by area. Every daily-plan hike is included here, plus the added Alpe di Siusi and Zans options.');
+  const section = sectionShell('hike-library', 'Hike Library', 'Complete reference library grouped West / East first, then by area. Every daily-plan hike is included here, plus the added Alpe di Siusi and Zans options.');
   const body = section.querySelector('.section-body');
   const toolbar = el('div', 'toolbar-row');
   const expand = el('button', 'toolbar-btn', 'Expand all');
@@ -624,41 +660,54 @@ function renderHikeLibrary() {
   collapse.addEventListener('click', () => document.querySelectorAll('#hike-library details.library-card').forEach(d => d.open = false));
   toolbar.appendChild(expand); toolbar.appendChild(collapse); body.appendChild(toolbar);
 
-  const groups = {};
+  const regions = {};
   Object.values(data.hikes).forEach(hike => {
-    const key = groupKeyFromName(hike.name, baseLabel(hike.bestBase));
-    groups[key] = groups[key] || [];
-    groups[key].push(hike);
+    const region = regionLabelFromBase(hike.bestBase);
+    const area = groupKeyFromName(hike.name, baseLabel(hike.bestBase));
+    (((regions[region] ||= {})[area] ||= [])).push(hike);
   });
-  Object.entries(groups).sort((a,b) => a[0].localeCompare(b[0])).forEach(([group, hikes]) => {
-    const wrap = el('div'); wrap.style.marginTop = '6px'; wrap.appendChild(el('h3','',escapeHtml(group)));
-    hikes.sort((a,b) => a.name.localeCompare(b.name)).forEach(hike => wrap.appendChild(renderHikeCard(hike)));
-    body.appendChild(wrap);
+  ['West','East','Transfer / mixed'].forEach(region => {
+    if (!regions[region]) return;
+    const regionWrap = el('section', 'library-region');
+    regionWrap.appendChild(el('h3','library-region-title',escapeHtml(region)));
+    Object.entries(regions[region]).sort((a,b) => a[0].localeCompare(b[0])).forEach(([area, hikes]) => {
+      const wrap = el('div','library-area');
+      wrap.appendChild(el('h4','library-area-title',escapeHtml(area)));
+      hikes.sort((a,b) => a.name.localeCompare(b.name)).forEach(hike => wrap.appendChild(renderHikeCard(hike)));
+      regionWrap.appendChild(wrap);
+    });
+    body.appendChild(regionWrap);
   });
   return section;
 }
 
 function renderScenicDrives() {
-  const section = sectionShell('scenic-drives', 'Scenic Drives', 'Complete scenic-drive reference library. Every daily-plan drive is included here.');
+  const section = sectionShell('scenic-drives', 'Scenic Drives', 'Complete scenic-drive reference library grouped West / East first, then by area. Every daily-plan drive is included here.');
   const body = section.querySelector('.section-body');
-  const groups = {};
+  const regions = {};
   Object.values(data.drives).forEach(drive => {
-    const key = groupKeyFromName(drive.name, drive.bestBase === 'cortina' ? 'East scenic drives' : drive.bestBase === 'ortisei' ? 'West scenic drives' : 'Transfer drives');
-    groups[key] = groups[key] || [];
-    groups[key].push(drive);
+    const region = drive.bestBase === 'both' ? 'Transfer / mixed' : regionLabelFromBase(drive.bestBase);
+    const area = groupKeyFromName(drive.name, drive.bestBase === 'cortina' ? 'East scenic drives' : drive.bestBase === 'ortisei' ? 'West scenic drives' : 'Transfer drives');
+    (((regions[region] ||= {})[area] ||= [])).push(drive);
   });
-  Object.entries(groups).forEach(([group, drives]) => {
-    body.appendChild(el('h3','',escapeHtml(group)));
-    drives.forEach(drive => {
-      const card = el('div', 'plan-card'); card.id = `drive-${drive.id}`;
-      card.innerHTML = `<div class="topline"><div class="title-block"><h4>${escapeHtml(drive.name)}</h4><p class="one-liner">${escapeHtml(drive.summary)}</p><div class="tag-row">${renderApplicableTagBadges(drive.weather, drive.energy, drive.tags, drive.commitment)}</div></div></div>`;
-      const links = el('div', 'link-list');
-      const routeHref = buildDriveRouteLink(drive); if (routeHref) links.appendChild(linkEl('Route', routeHref));
-      (drive.keyStops || []).forEach(id => { const p = resolvePlace(id); if (p) links.appendChild(linkEl(p.name, p.mapLink)); });
-      card.appendChild(links);
-      card.appendChild(el('div', 'tag-row', `<span class="badge">Best base: ${escapeHtml(drive.bestBase === 'both' ? 'Transfer' : baseLabel(drive.bestBase))}</span><span class="badge">${escapeHtml(drive.duration || '')}</span>`));
-      body.appendChild(card);
+  ['West','East','Transfer / mixed'].forEach(region => {
+    if (!regions[region]) return;
+    const regionWrap = el('section', 'library-region');
+    regionWrap.appendChild(el('h3','library-region-title',escapeHtml(region)));
+    Object.entries(regions[region]).sort((a,b) => a[0].localeCompare(b[0])).forEach(([group, drives]) => {
+      regionWrap.appendChild(el('h4','library-area-title',escapeHtml(group)));
+      drives.forEach(drive => {
+        const card = el('div', 'plan-card'); card.id = `drive-${drive.id}`;
+        card.innerHTML = `<div class="topline"><div class="title-block"><h4>${escapeHtml(drive.name)}</h4><p class="one-liner">${escapeHtml(drive.summary)}</p><div class="tag-row">${renderApplicableTagBadges(drive.weather, drive.energy, drive.tags, drive.commitment)}</div></div></div>`;
+        const links = el('div', 'link-list');
+        const routeHref = buildDriveRouteLink(drive); if (routeHref) links.appendChild(linkEl('Route', routeHref));
+        (drive.keyStops || []).forEach(id => { const p = resolvePlace(id); if (p) links.appendChild(linkEl(p.name, p.mapLink)); });
+        card.appendChild(links);
+        card.appendChild(el('div', 'tag-row', `<span class="badge">Best base: ${escapeHtml(drive.bestBase === 'both' ? 'Transfer' : baseLabel(drive.bestBase))}</span><span class="badge">${escapeHtml(drive.duration || '')}</span>`));
+        regionWrap.appendChild(card);
+      });
     });
+    body.appendChild(regionWrap);
   });
   return section;
 }
