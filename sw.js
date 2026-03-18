@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dolomites-trip-dashboard-v7-20260317';
+const CACHE_NAME = 'dolomites-trip-dashboard-v8-20260317';
 const ASSETS = [
   './',
   './index.html',
